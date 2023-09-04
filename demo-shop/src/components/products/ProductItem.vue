@@ -10,12 +10,26 @@
         <p>{{ description }}</p>
       </div>
     </div>
+    <div class="product__actions">
+      <button @click="addToCart">Add to Cart</button>
+    </div>
   </li>
 </template>
 
 <script>
 export default {
+  inject: ['addProductToCart'],
   props: ['id', 'image', 'title', 'price', 'description'],
+  methods: {
+    addToCart() {
+      this.addProductToCart({
+        id: this.id,
+        image: this.image,
+        title: this.title,
+        price: this.price
+      })
+    }
+  }
 }
 </script>
 
@@ -46,5 +60,25 @@ li {
 
 .product__text h4 {
   margin: 0;
+}
+
+.product__actions {
+  text-align: center;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #45006d;
+  color: white;
+  border: 1px solid #45006d;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+}
+
+button:hover,
+button:active {
+  background-color: #760ab4;
+  border-color: #760ab4;
 }
 </style>
