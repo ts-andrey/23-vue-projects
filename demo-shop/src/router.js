@@ -1,6 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-export default router = createRouter({
+import ProductsList from './pages/ProductsList.vue';
+import ShopAdmin from './pages/ShopAdmin.vue';
+import UserCart from './pages/UserCart.vue';
+
+const router = createRouter({
   history: createWebHistory(),
-  routes: [{}],
+  routes: [
+    {path: '/',  redirect: '/products'},
+    {path: '/products', component: ProductsList},
+    {path: '/cart', component: UserCart},
+    {path: '/admin', component: ShopAdmin},
+  ],
 });
+
+export default router;

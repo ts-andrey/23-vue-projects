@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <h1>demo-shop</h1>
+  <router-view></router-view>
 </template>
