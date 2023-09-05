@@ -2,11 +2,13 @@
   <li class="product">
     <div class="product__data">
       <div class="product__image">
-        <img :src="image" :alt="title">
+        <img :src="image" :alt="title" />
       </div>
       <div class="product__text">
         <h3>{{ title }}</h3>
-        <h4>{{ price }}</h4>
+        <base-badge mode="highlight" :no-margin-left="true">
+          <h4>{{ price }}</h4>
+        </base-badge>
         <p>{{ description }}</p>
       </div>
     </div>
@@ -26,11 +28,11 @@ export default {
         id: this.id,
         image: this.image,
         title: this.title,
-        price: this.price
-      })
-    }
-  }
-}
+        price: this.price,
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>

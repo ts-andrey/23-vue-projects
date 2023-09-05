@@ -1,7 +1,7 @@
 <template>
   <li>
     <div>
-      <img :src="image" :alt="title">
+      <img :src="image" :alt="title" />
     </div>
     <div>
       <h3>{{ title }}</h3>
@@ -28,14 +28,14 @@ export default {
   computed: {
     itemTotal() {
       return (this.price * this.qty).toFixed(2);
-    }
+    },
   },
   methods: {
     remove() {
       this.removeProductFromCart(this.prodId);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
