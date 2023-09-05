@@ -8,18 +8,18 @@ import TheHeader from './components/nav/TheHeader.vue';
 
 export default {
   components: {
-    TheHeader
+    TheHeader,
   },
   data() {
     return {
+      isLoggedIn: false,
       products: [
         {
           id: 'p1',
           image:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Books_HD_%288314929977%29.jpg/640px-Books_HD_%288314929977%29.jpg',
           title: 'Book Collection',
-          description:
-            'A collection of must-read books. All-time classics included!',
+          description: 'A collection of must-read books. All-time classics included!',
           price: 99.99,
         },
         {
@@ -35,27 +35,27 @@ export default {
           image:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/640px-Good_Food_Display_-_NCI_Visuals_Online.jpg',
           title: 'Food Box',
-          description:
-            'May be partially expired when it arrives but at least it is cheap!',
+          description: 'May be partially expired when it arrives but at least it is cheap!',
           price: 6.99,
         },
       ],
       cart: { items: [], total: 0, qty: 0 },
-    }
+    };
   },
   provide() {
     return {
       products: this.products,
       cart: this.cart,
+      isLoggedIn: this.isLoggedIn,
       addProductToCart: this.addProductToCart,
       removeProductFromCart: this.removeProductFromCart,
-    }
+      login: this.login,
+      logout: this.logout,
+    };
   },
   methods: {
     addProductToCart(productData) {
-      const productInCartIndex = this.cart.items.findIndex(
-        (ci) => ci.productId === productData.id
-      );
+      const productInCartIndex = this.cart.items.findIndex(ci => ci.productId === productData.id);
 
       if (productInCartIndex >= 0) {
         this.cart.items[productInCartIndex].qty++;
@@ -74,14 +74,21 @@ export default {
     },
 
     removeProductFromCart(prodId) {
-      const productInCartIndex = this.cart.items.findIndex(
-        (cartItem) => cartItem.productId === prodId
-      );
+      const productInCartIndex = this.cart.items.findIndex(cartItem => cartItem.productId === prodId);
       const prodData = this.cart.items[productInCartIndex];
       this.cart.items.splice(productInCartIndex, 1);
       this.cart.qty -= prodData.qty;
       this.cart.total -= prodData.price * prodData.qty;
     },
-  }
-}
+
+    login() {
+      this.isLoggedIn = true;
+      console.log(this.isLoggedIn, 'login');
+    },
+    logout() {
+      this.isLoggedIn = false;
+      console.log(this.isLoggedIn, 'logout');
+    },
+  },
+};
 </script>

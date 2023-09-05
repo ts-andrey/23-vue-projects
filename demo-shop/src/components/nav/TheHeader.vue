@@ -11,15 +11,23 @@
         <li>
           <router-link to="/cart">Cart</router-link>
         </li>
-        <li>
+        <li v-if="isLoggedIn">
           <router-link to="/admin">Admin</router-link>
         </li>
       </ul>
     </nav>
+    <div>
+      <button v-if="!isLoggedIn" @click="login">Login</button>
+      <button v-if="isLoggedIn" @click="logout">Logout</button>
+    </div>
   </header>
 </template>
 
-<script></script>
+<script>
+export default {
+  inject: ['isLoggedIn', 'login', 'logout', 'cart'],
+}
+</script>
 
 <style scoped>
 header {
@@ -57,5 +65,19 @@ a:active,
 a.router-link-active {
   color: #45006d;
   border-color: #45006d;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #45006d;
+  color: #45006d;
+  border-radius: 30px;
+}
+
+button:hover,
+button:active {
+  background-color: #f0d5ff;
 }
 </style>
