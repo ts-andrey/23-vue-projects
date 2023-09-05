@@ -1,6 +1,8 @@
 <template>
-  <h2>Shop Admin page</h2>
-  <p>There could be any Shop Admin related content...</p>
+  <section>
+    <h2>Shop Admin page</h2>
+    <p>There could be any Shop Admin related content...</p>
+  </section>
 </template>
 
 <script></script>
