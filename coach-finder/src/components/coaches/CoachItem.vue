@@ -39,11 +39,16 @@ li {
 
 h3 {
   font-size: 1.5rem;
+  font-weight: 700;
+}
+h4 {
+  font-weight: 500;
 }
 
 h3,
 h4 {
   margin: 0.5rem 0;
+
 }
 
 div {
