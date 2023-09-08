@@ -2,15 +2,15 @@
   <base-card>
     <h2>Find Yout Coach</h2>
     <span class="filter-option">
-      <label for="">FrontEnd</label>
+      <label for="frontend">FrontEnd</label>
       <input type="checkbox" name="frontend" id="frontend" checked @change="setFilter" />
     </span>
     <span class="filter-option">
-      <label for="">BackEnd</label>
+      <label for="backend">BackEnd</label>
       <input type="checkbox" name="backend" id="backend" checked @change="setFilter" />
     </span>
     <span class="filter-option">
-      <label for="">Career</label>
+      <label for="career">Career</label>
       <input type="checkbox" name="career" id="career" checked @change="setFilter" />
     </span>
   </base-card>
