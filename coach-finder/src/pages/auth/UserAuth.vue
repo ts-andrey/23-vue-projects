@@ -52,14 +52,19 @@ export default {
         return;
       }
 
+      const authPayload = {
+        email: this.email,
+        password: this.password,
+      };
       this.isLoading = true;
+
       try {
         if (this.mode === 'login') {
+          await this.$store.dispatch('login', authPayload);
+          this.$router.replace('/coaches');
         } else {
-          await this.$store.dispatch('signup', {
-            email: this.email,
-            password: this.password,
-          });
+          await this.$store.dispatch('signup', authPayload);
+          this.$router.replace('/coaches');
         }
       } catch (error) {
         this.error = error.message;
