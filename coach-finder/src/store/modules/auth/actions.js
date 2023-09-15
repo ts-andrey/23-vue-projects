@@ -1,3 +1,5 @@
+let timer;
+
 export default {
   async login(context, payload) {
     return context.dispatch('auth', {
@@ -35,32 +37,58 @@ export default {
       throw new Error(responseData.error.message || 'Failed to signup');
     }
 
+    const expiresIn = +responseData.expiresIn * 1000;
+    const expirationDate = new Date().getTime() + expiresIn;
+
     localStorage.setItem('token', responseData.idToken);
     localStorage.setItem('userId', responseData.localId);
+    localStorage.setItem('tokenExpiration', expirationDate);
+
+    timer = setTimeout(function () {
+      context.dispatch('autoLogout');
+    }, expiresIn);
 
     context.commit('setUser', {
       token: responseData.idToken,
       userId: responseData.localId,
-      tokenExpiration: responseData.expiresIn,
     });
   },
   autoLogin(context) {
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
+    const tokenExpiration = localStorage.getItem('tokenExpiration');
+
+    const expireTime = +tokenExpiration - new Date().getTime();
+
+    if (expireTime < 10000) {
+      return;
+    }
+
+    timer = setTimeout(function () {
+      context.dispatch('autoLogout');
+    }, expireTime);
 
     if (token && userId) {
       context.commit('setUser', {
         token,
         userId,
-        tokenExpiration: null,
       });
     }
   },
   logout(context) {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('tokenExpiration');
+
+    clearTimeout(timer);
+
     context.commit('setUser', {
       token: null,
       userId: null,
-      tokenExpiration: null,
     });
+  },
+  autoLogout(context) {
+    context.dispatch('logout');
+    context.commit('setAutoLogout');
   },
 };
