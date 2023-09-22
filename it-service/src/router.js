@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import About from './pages/About.vue';
+import Welcome from './pages/Welcome.vue';
 import Computers from './pages/Computers.vue';
 import Phones from './pages/Phones.vue';
 import Service from './pages/Service.vue';
@@ -12,7 +12,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: About,
+      component: Welcome,
     },
     {
       path: '/computers',
