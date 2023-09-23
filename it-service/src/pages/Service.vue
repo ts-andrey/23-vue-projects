@@ -1,11 +1,14 @@
 <template>
-  <h1>Service page</h1>
-  
-  </template>
-  
-  <script>
-  </script>
-  
-  <style scoped>
-  </style>
-  
+  <Service />
+</template>
+
+<script>
+import Service from '../components/service/Service.vue';
+export default {
+  components: {
+    Service,
+  },
+};
+</script>
+
+<style scoped></style>

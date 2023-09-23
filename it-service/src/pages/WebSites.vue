@@ -1,11 +1,14 @@
 <template>
-  <h1>WebSites page</h1>
-  
-  </template>
-  
-  <script>
-  </script>
-  
-  <style scoped>
-  </style>
-  
+  <WebSites />
+</template>
+
+<script>
+import WebSites from '../components/websites/WebSites.vue';
+export default {
+  components: {
+    WebSites,
+  },
+};
+</script>
+
+<style scoped></style>
