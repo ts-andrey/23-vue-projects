@@ -4,7 +4,7 @@ export default [
     description:
       'Our company is able to repair any kind of modern gadjets. And you can even check the status of your order (waiting for spare parts, in repairing process, ready to take)',
     icon: 'repair',
-    children: [
+    childrenData: [
       { name: 'PC', icon: 'pc' },
       { name: 'Laptop', icon: 'laptop' },
       { name: 'Tablet', icon: 'tablet' },
@@ -20,7 +20,7 @@ export default [
     name: 'Company service',
     description: 'We provide our professional services to the companies',
     icon: 'service',
-    children: [
+    childrenData: [
       { name: 'Software: install/fix', icon: 'software' },
       { name: 'PC: install/repair', icon: 'pc' },
       { name: 'Network: build/ajdust', icon: 'network' },
