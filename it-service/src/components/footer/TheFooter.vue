@@ -1,26 +1,23 @@
 <template>
   <nav class="nav">
     <ul>
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/phones">Phones</router-link>
-      </li>
-      <li>
-        <router-link to="/computers">Computers</router-link>
-      </li>
-      <li>
-        <router-link to="/service">Service</router-link>
-      </li>
-      <li>
-        <router-link to="/websites">Websites</router-link>
+      <li v-for="link in linksArr">
+        <router-link :to="link.link">{{ link.name }}</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
-<script></script>
+<script>
+import linksData from '../../data/linksData';
+export default {
+  data() {
+    return {
+      linksArr: linksData,
+    };
+  },
+};
+</script>
 
 <style scoped>
 .nav {

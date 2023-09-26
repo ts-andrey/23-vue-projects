@@ -5,6 +5,8 @@ import Computers from './pages/Computers.vue';
 import Phones from './pages/Phones.vue';
 import Service from './pages/Service.vue';
 import WebSites from './pages/WebSites.vue';
+import Shop from './pages/Shop.vue';
+import OrderStatus from './pages/OrderStatus.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,16 @@ const router = createRouter({
       path: '/webSites',
       name: 'webSites',
       component: WebSites,
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: Shop,
+    },
+    {
+      path: '/order-status',
+      name: 'orders',
+      component: OrderStatus,
     },
   ],
 });
