@@ -1,11 +1,13 @@
 <template>
-  <nav class="nav">
-    <ul>
-      <li v-for="link in linksArr">
-        <router-link :to="link.link">{{ link.name }}</router-link>
-      </li>
-    </ul>
-  </nav>
+  <footer class="footer">
+    <nav class="nav">
+      <ul>
+        <li v-for="link in linksArr">
+          <router-link :to="link.link">{{ link.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </template>
 
 <script>
@@ -20,6 +22,12 @@ export default {
 </script>
 
 <style scoped>
+.footer {
+  height: 5rem;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
 .nav {
   display: flex;
   justify-content: center;

@@ -1,12 +1,12 @@
 <template>
-  <Computer />
+  <Registration />
 </template>
 
 <script>
-import Computer from '../components/computer/Computer.vue';
+import Registration from '../components/order/Registration.vue';
 export default {
   components: {
-    Computer,
+    Registration,
   },
 };
 </script>

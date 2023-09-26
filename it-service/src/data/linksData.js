@@ -1,9 +1,10 @@
 export default [
   { name: 'Home', link: '/' },
-  { name: 'Phones', link: '/phones' },
-  { name: 'Computers', link: '/computers' },
+  { name: 'Repair', link: '/repair' },
   { name: 'Service', link: '/service' },
-  { name: 'Websites', link: '/websites' },
+  { name: 'Websites', link: '/web' },
   { name: 'Shop', link: '/shop' },
-  { name: 'OrderStatus', link: '/order-status' },
+  { name: 'OrderStatus', link: '/status' },
+  { name: 'Register', link: '/register' },
+  { name: 'Login', link: '/auth' },
 ];

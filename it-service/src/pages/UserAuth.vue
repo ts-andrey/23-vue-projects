@@ -1,12 +1,12 @@
 <template>
-  <Status />
+  <Auth />
 </template>
 
 <script>
-import Status from '../components/order/Status.vue';
+import Auth from '../components/auth/Auth.vue';
 export default {
   components: {
-    Status,
+    Auth,
   },
 };
 </script>

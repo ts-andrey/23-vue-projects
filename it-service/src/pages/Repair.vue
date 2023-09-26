@@ -1,12 +1,12 @@
 <template>
-  <Status />
+  <Repair />
 </template>
 
 <script>
-import Status from '../components/order/Status.vue';
+import Repair from '../components/repair/Repair.vue';
 export default {
   components: {
-    Status,
+    Repair,
   },
 };
 </script>

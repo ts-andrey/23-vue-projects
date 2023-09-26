@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import Welcome from './pages/Welcome.vue';
-import Computers from './pages/Computers.vue';
-import Phones from './pages/Phones.vue';
+import Repair from './pages/Repair.vue';
 import Service from './pages/Service.vue';
 import WebSites from './pages/WebSites.vue';
 import Shop from './pages/Shop.vue';
 import OrderStatus from './pages/OrderStatus.vue';
+import OrderRegistration from './pages/OrderRegistraiton.vue';
+import UserAuth from './pages/UserAuth.vue';
+import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,14 +19,9 @@ const router = createRouter({
       component: Welcome,
     },
     {
-      path: '/computers',
-      name: 'computers',
-      component: Computers,
-    },
-    {
-      path: '/phones',
-      name: 'phones',
-      component: Phones,
+      path: '/repair',
+      name: 'repair',
+      component: Repair,
     },
     {
       path: '/service',
@@ -32,8 +29,8 @@ const router = createRouter({
       component: Service,
     },
     {
-      path: '/webSites',
-      name: 'webSites',
+      path: '/web',
+      name: 'web',
       component: WebSites,
     },
     {
@@ -42,9 +39,23 @@ const router = createRouter({
       component: Shop,
     },
     {
-      path: '/order-status',
-      name: 'orders',
+      path: '/status',
+      name: 'status',
       component: OrderStatus,
+    },
+    {
+      path: '/auth',
+      name: 'auth',
+      component: UserAuth,
+    },
+    {
+      path: '/register',
+      name: 'orderRegistration',
+      component: OrderRegistration,
+    },
+    {
+      path: '/:notFound(.*)',
+      component: NotFound,
     },
   ],
 });

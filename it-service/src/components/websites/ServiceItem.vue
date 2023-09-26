@@ -1,12 +1,11 @@
 <template>
-  <Phone />
+  <h1>Shop Page</h1>
 </template>
 
 <script>
-import Phone from '../components/phone/Phone.vue';
 export default {
-  components: {
-    Phone,
+  data() {
+    return {};
   },
 };
 </script>

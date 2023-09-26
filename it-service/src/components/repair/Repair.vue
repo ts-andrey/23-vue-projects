@@ -1,5 +1,5 @@
 <template>
-  <h1>Computer page</h1>
+  <h1>Repair page</h1>
   
   </template>
   
