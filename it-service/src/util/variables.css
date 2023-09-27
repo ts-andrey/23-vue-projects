@@ -1,11 +1,14 @@
 :root {
   /* COLORS */
-  --color-bg-main: #000;
+  --color-bg-main: #12141a;
 
   --color-font-main: #FF9B50;
 
+  --color-main--light: #A6B1E1;
+  --color-main--dark: #112D4E;
+
   /* SIZES */
 
-  --size-header-height: 10rem;
+  --size-header-height: 13rem;
   --size-footer-height: 5rem;
 }

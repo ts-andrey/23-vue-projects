@@ -63,15 +63,15 @@ export default {
 .nav li {
   margin: 0 5px;
   display: flex;
-  border: 1px solid #000;
+  border: 1px dotted var(--color-main--light);
   border-radius: 5px;
 
   transition: all 0.3s;
 }
 
 .nav li:hover {
-  color: #fff;
-  background-color: #000;
+  color: var(--color-main--dark);
+  background-color: var(--color-main--light);
 }
 
 a {
