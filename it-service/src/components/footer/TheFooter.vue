@@ -23,10 +23,14 @@ export default {
 
 <style scoped>
 .footer {
-  height: 5rem;
+  position: relative;
+  z-index: 10;
+  
+  height: var(--size-footer-height);
   display: flex;
   place-items: center;
   place-content: center;
+  flex-shrink: 0;
 }
 .nav {
   display: flex;

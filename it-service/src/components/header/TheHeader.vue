@@ -7,6 +7,7 @@
         </li>
       </ul>
     </nav>
+    <div class="bg"></div>
   </header>
 </template>
 
@@ -23,14 +24,33 @@ export default {
 
 <style scoped>
 .header {
-  height: 10rem;
+  position: sticky;
+  z-index: 10;
+
+  height: var(--size-header-height);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 
-  font-size: 110%;
+  font-size: 22px;
 }
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg-header.webp');
+  opacity: 40%;
+}
+
 .nav {
+  position: relative;
+  z-index: 10;
+
   display: flex;
   justify-content: center;
 }
@@ -55,9 +75,13 @@ export default {
 }
 
 a {
-  display: inline-block;
-  padding: 6px 12px;
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+
+  padding: 6px 12px;
+  display: inline-block;
+
+  font-weight: 500;
+  letter-spacing: .5px;
 }
 </style>

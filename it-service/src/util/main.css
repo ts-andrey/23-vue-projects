@@ -1,0 +1,14 @@
+@import './base.css';
+@import './variables.css';
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+
+  background-color: var(--color-bg-main);
+  color: var(--color-font-main);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}

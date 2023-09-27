@@ -19,7 +19,7 @@ import ServiceItem from './ServiceItem.vue';
 import servicesData from '../../data/servicesData.js';
 export default {
   components: {
-    ServiceItem
+    ServiceItem,
   },
   data() {
     return {

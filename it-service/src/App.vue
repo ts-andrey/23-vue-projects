@@ -1,6 +1,6 @@
 <template>
   <TheHeader />
-  <main>
+  <main class="main">
     <router-view></router-view>
   </main>
   <TheFooter />
@@ -18,9 +18,9 @@ export default {
 </script>
 
 <style scoped>
-main {
-  display: flex;
+.main {
   padding: 2rem 0 2rem;
+  display: flex;
   justify-content: center;
   flex-grow: 1;
 }
