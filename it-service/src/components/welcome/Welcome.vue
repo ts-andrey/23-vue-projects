@@ -1,15 +1,14 @@
 <template>
   <section>
-    <h1>Welcome page</h1>
-    <h2>Services we provide</h2>
+    <h1>Our services</h1>
     <ul class="services">
-        <ServiceItem
-          v-for="service in servicesList"
-          :name="service.name"
-          :description="service.description"
-          :childrenData="service.childrenData"
-          :icon="service.icon"
-        ></ServiceItem>
+      <ServiceItem
+        v-for="service in servicesList"
+        :name="service.name"
+        :description="service.description"
+        :childrenData="service.childrenData"
+        :icon="service.icon"
+      ></ServiceItem>
     </ul>
   </section>
 </template>
@@ -30,12 +29,17 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
 .services {
   list-style: none;
   padding: 0;
 
   display: grid;
-  grid-template-columns: repeat(3, 15rem);
+  grid-template-columns: repeat(3, 17rem);
   gap: 4rem 2rem;
 }
 </style>

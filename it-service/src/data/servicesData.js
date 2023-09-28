@@ -2,7 +2,7 @@ export default [
   {
     name: 'Repair',
     description:
-      'Our company is able to repair any kind of modern gadjets. And you can even check the status of your order (waiting for spare parts, in repairing process, ready to take)',
+      'Our company is able to repair any kind of modern gadjets. And you can even check the status of your order (waiting for spare parts, in repairing process, ready to take):',
     icon: 'repair',
     childrenData: [
       { name: 'PC', icon: 'pc' },
@@ -12,14 +12,14 @@ export default [
     ],
   },
   {
-    name: 'Custom assempling',
+    name: 'Custom assembling',
     description: `If you are unsure about assembling your computer - we can help you and build you PC for your specifical needs and budget`,
-    icon: 'PC',
+    icon: 'assembly',
   },
   {
     name: 'Company service',
     description: 'We provide our professional services to the companies',
-    icon: 'service',
+    icon: 'services',
     childrenData: [
       { name: 'Software: install/fix', icon: 'software' },
       { name: 'PC: install/repair', icon: 'pc' },
