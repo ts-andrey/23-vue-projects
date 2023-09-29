@@ -8,6 +8,7 @@ import Shop from './pages/Shop.vue';
 import OrderStatus from './pages/OrderStatus.vue';
 import OrderRegistration from './pages/OrderRegistraiton.vue';
 import UserAuth from './pages/UserAuth.vue';
+import Contacts from './pages/Contacts.vue';
 import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
@@ -52,6 +53,11 @@ const router = createRouter({
       path: '/register',
       name: 'orderRegistration',
       component: OrderRegistration,
+    },
+    {
+      path: '/contacts',
+      name: 'contacts',
+      component: Contacts,
     },
     {
       path: '/:notFound(.*)',

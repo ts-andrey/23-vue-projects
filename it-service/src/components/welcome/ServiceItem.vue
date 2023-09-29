@@ -1,44 +1,44 @@
 <template>
   <li class="serviceItem">
-    <base-card>
-      <div class="wrapper">
-        <h3>{{ name }}</h3>
-        <span class="icon" v-if="icon === 'web'"><WebIcon /></span>
-        <span class="icon" v-if="icon === 'repair'"><RepairIcon /></span>
-        <span class="icon" v-if="icon === 'service'"><ServiceIcon /></span>
-        <span class="icon" v-if="icon === 'shop'"><ShopIcon /></span>
-        <span class="icon" v-if="icon === 'assembly'"><AssemblyIcon /></span>
-        <p>{{ description }}</p>
-        <ul v-if="childrenData">
-          <li v-for="child in childrenData">
-            <h4>{{ child.name }}</h4>
-            <span class="icon" v-if="child.icon === 'laptop'"><LaptopIcon /></span>
-            <span class="icon" v-if="child.icon === 'pc'"><PCIcon /></span>
-            <span class="icon" v-if="child.icon === 'phone'"><PhoneIcon /></span>
-            <span class="icon" v-if="child.icon === 'service'"><ServiceIcon /></span>
-            <span class="icon" v-if="child.icon === 'shop'"><ShopIcon /></span>
-            <span class="icon" v-if="child.icon === 'software'"><SoftwareIcon /></span>
-            <span class="icon" v-if="child.icon === 'tablet'"><TabletIcon /></span>
-            <span class="icon" v-if="child.icon === 'network'"><NetworkIcon /></span>
-            <span class="icon" v-if="child.icon === 'appliance'"><ApplianceIcon /></span>
-            <span class="icon" v-if="child.icon === 'gadget'"><GadgetIcon /></span>
-
-            <span class="icon" v-if="child.icon === 'api'"><APIIcon /></span>
-            <span class="icon" v-if="child.icon === 'blog'"><BlogIcon /></span>
-            <span class="icon" v-if="child.icon === 'custom'"><CustomIcon /></span>
-            <span class="icon" v-if="child.icon === 'forum'"><ForumIconIIcon /></span>
-            <span class="icon" v-if="child.icon === 'server'"><ServerIcon /></span>
-            <span class="icon" v-if="child.icon === 'spa'"><SPAIcon /></span>
-            <span class="icon" v-if="child.icon === 'widget'"><WidgetIcon /></span>
-
-            <span class="icon" v-if="child.icon === 'cheap'"><CheapIcon /></span>
-            <span class="icon" v-if="child.icon === 'gaming'"><GamingIcon /></span>
-            <span class="icon" v-if="child.icon === 'mining'"><MiningIcon /></span>
-            <span class="icon" v-if="child.icon === 'work'"><WorkIcon /></span>
-          </li>
-        </ul>
-      </div>
-    </base-card>
+    <router-link :to=link>
+      <base-card>
+        <div class="wrapper">
+          <h3>{{ name }}</h3>
+          <span class="icon" v-if="icon === 'web'"><WebIcon /></span>
+          <span class="icon" v-if="icon === 'repair'"><RepairIcon /></span>
+          <span class="icon" v-if="icon === 'service'"><ServiceIcon /></span>
+          <span class="icon" v-if="icon === 'shop'"><ShopIcon /></span>
+          <span class="icon" v-if="icon === 'assembly'"><AssemblyIcon /></span>
+          <p>{{ description }}</p>
+          <ul v-if="childrenData">
+            <li v-for="child in childrenData">
+              <h4>{{ child.name }}</h4>
+              <span class="icon" v-if="child.icon === 'laptop'"><LaptopIcon /></span>
+              <span class="icon" v-if="child.icon === 'pc'"><PCIcon /></span>
+              <span class="icon" v-if="child.icon === 'phone'"><PhoneIcon /></span>
+              <span class="icon" v-if="child.icon === 'service'"><ServiceIcon /></span>
+              <span class="icon" v-if="child.icon === 'shop'"><ShopIcon /></span>
+              <span class="icon" v-if="child.icon === 'software'"><SoftwareIcon /></span>
+              <span class="icon" v-if="child.icon === 'tablet'"><TabletIcon /></span>
+              <span class="icon" v-if="child.icon === 'network'"><NetworkIcon /></span>
+              <span class="icon" v-if="child.icon === 'appliance'"><ApplianceIcon /></span>
+              <span class="icon" v-if="child.icon === 'gadget'"><GadgetIcon /></span>
+              <span class="icon" v-if="child.icon === 'api'"><APIIcon /></span>
+              <span class="icon" v-if="child.icon === 'blog'"><BlogIcon /></span>
+              <span class="icon" v-if="child.icon === 'custom'"><CustomIcon /></span>
+              <span class="icon" v-if="child.icon === 'forum'"><ForumIconIIcon /></span>
+              <span class="icon" v-if="child.icon === 'server'"><ServerIcon /></span>
+              <span class="icon" v-if="child.icon === 'spa'"><SPAIcon /></span>
+              <span class="icon" v-if="child.icon === 'widget'"><WidgetIcon /></span>
+              <span class="icon" v-if="child.icon === 'cheap'"><CheapIcon /></span>
+              <span class="icon" v-if="child.icon === 'gaming'"><GamingIcon /></span>
+              <span class="icon" v-if="child.icon === 'mining'"><MiningIcon /></span>
+              <span class="icon" v-if="child.icon === 'work'"><WorkIcon /></span>
+            </li>
+          </ul>
+        </div>
+      </base-card>
+    </router-link>
   </li>
 </template>
 
@@ -72,22 +72,38 @@ import GamingIcon from '../icons/welcomeBuild/GamingIcon.vue';
 import MiningIcon from '../icons/welcomeBuild/MiningIcon.vue';
 import WorkIcon from '../icons/welcomeBuild/WorkIcon.vue';
 
-
 export default {
   components: {
-    AssemblyIcon, RepairIcon, WebIcon,
+    AssemblyIcon,
+    RepairIcon,
+    WebIcon,
 
-    ApplianceIcon, GadgetIcon, LaptopIcon, NetworkIcon, 
-    PCIcon, PhoneIcon, SoftwareIcon, TabletIcon,
+    ApplianceIcon,
+    GadgetIcon,
+    LaptopIcon,
+    NetworkIcon,
+    PCIcon,
+    PhoneIcon,
+    SoftwareIcon,
+    TabletIcon,
 
-    ServiceIcon, ShopIcon,
+    ServiceIcon,
+    ShopIcon,
 
-    APIIcon, BlogIcon, CustomIcon, ForumIconIIcon,
-    ServerIcon, SPAIcon, WidgetIcon,
+    APIIcon,
+    BlogIcon,
+    CustomIcon,
+    ForumIconIIcon,
+    ServerIcon,
+    SPAIcon,
+    WidgetIcon,
 
-    CheapIcon, GamingIcon,MiningIcon,WorkIcon,
+    CheapIcon,
+    GamingIcon,
+    MiningIcon,
+    WorkIcon,
   },
-  props: ['name', 'description', 'icon', 'childrenData'],
+  props: ['name', 'description', 'icon', 'childrenData', 'link'],
 };
 </script>
 
@@ -150,5 +166,10 @@ li li {
 
 li li h4 {
   margin: 0 0 7px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>

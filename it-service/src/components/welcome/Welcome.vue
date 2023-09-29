@@ -8,6 +8,7 @@
         :description="service.description"
         :childrenData="service.childrenData"
         :icon="service.icon"
+        :link="service.link"
       ></ServiceItem>
     </ul>
   </section>
