@@ -7,4 +7,5 @@ export default [
   { name: 'OrderStatus', link: '/status' },
   { name: 'Register', link: '/register' },
   { name: 'Login', link: '/auth' },
+  { name: 'Contacts', link: '/contacts' },
 ];

@@ -1,5 +1,8 @@
 <template>
   <footer class="footer">
+    <div class="logo">
+      <base-logo />
+    </div>
     <nav class="nav">
       <ul>
         <li v-for="link in linksArr">
@@ -25,12 +28,17 @@ export default {
 .footer {
   position: relative;
   z-index: 10;
-  
+
   height: var(--size-footer-height);
   display: flex;
   place-items: center;
   place-content: center;
   flex-shrink: 0;
+}
+
+.logo {
+  height: calc(var(--size-footer-height) * 0.95);
+  display: flex;
 }
 .nav {
   display: flex;

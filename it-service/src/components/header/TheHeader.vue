@@ -1,5 +1,8 @@
 <template>
   <header class="header">
+    <div class="logo">
+      <base-logo />
+    </div>
     <nav class="nav">
       <ul>
         <li v-for="link in linksArr">
@@ -34,6 +37,11 @@ export default {
   flex-shrink: 0;
 
   font-size: 22px;
+}
+
+.logo {
+  display: flex;
+  height: calc(var(--size-header-height) * 0.95);
 }
 
 .bg {
@@ -82,6 +90,6 @@ a {
   display: inline-block;
 
   font-weight: 500;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 </style>
