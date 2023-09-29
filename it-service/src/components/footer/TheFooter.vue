@@ -10,6 +10,7 @@
         </li>
       </ul>
     </nav>
+    <div class="bg"></div>
   </footer>
 </template>
 
@@ -29,7 +30,8 @@ export default {
   position: relative;
   z-index: 10;
 
-  height: var(--size-footer-height);
+  padding: 10px 0;
+  height: calc(var(--size-footer-height) + 20px);
   display: flex;
   place-items: center;
   place-content: center;
@@ -41,6 +43,9 @@ export default {
   display: flex;
 }
 .nav {
+  position: relative;
+  z-index: 10;
+
   display: flex;
   justify-content: center;
 }
@@ -59,5 +64,16 @@ a {
   padding: 4px 8px;
   color: inherit;
   text-decoration: none;
+}
+
+.bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: bottom / cover no-repeat url('../../assets/images/bg-header.webp');
+  opacity: 40%;
 }
 </style>

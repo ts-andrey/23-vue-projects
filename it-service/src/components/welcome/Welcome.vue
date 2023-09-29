@@ -12,6 +12,7 @@
       ></ServiceItem>
     </ul>
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -30,6 +31,12 @@ export default {
 </script>
 
 <style scoped>
+section{
+  position: relative;
+  z-index: 10;
+  padding: 40px 0;
+}
+
 h1 {
   text-align: center;
   font-size: 36px;
@@ -37,10 +44,21 @@ h1 {
 }
 .services {
   list-style: none;
-  padding: 0;
+  padding:0;
 
   display: grid;
   grid-template-columns: repeat(3, 17rem);
   gap: 4rem 2rem;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg-home.webp');
+  opacity: 30%;
 }
 </style>

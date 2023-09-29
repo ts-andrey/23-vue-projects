@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 .main {
-  padding: 2rem 0 2rem;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-grow: 1;
