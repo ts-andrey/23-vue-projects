@@ -31,10 +31,10 @@ export default {
 </script>
 
 <style scoped>
-section{
+section {
   position: relative;
   z-index: 10;
-  padding: 60px 0 100px 0;
+  padding: var(--padding-section-default);
 }
 
 h1 {
@@ -44,7 +44,7 @@ h1 {
 }
 .services {
   list-style: none;
-  padding:0;
+  padding: 0;
 
   display: grid;
   grid-template-columns: repeat(3, 290px);

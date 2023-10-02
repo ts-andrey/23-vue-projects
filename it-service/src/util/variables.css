@@ -7,10 +7,15 @@
   --color-main--light: #A6B1E1;
   --color-main--dark: #112D4E;
 
-  --color-main--attract: #A6B1E1;
+  --color-main--attract: #FF2E63;
 
   /* SIZES */
 
   --size-header-height: 300px;
   --size-footer-height: 100px;
+
+
+  /* PADDINGS / MARGINS */
+
+  --padding-section-default: 60px 0 100px 0;
 }

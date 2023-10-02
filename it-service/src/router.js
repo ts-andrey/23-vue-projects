@@ -40,11 +40,6 @@ const router = createRouter({
       component: Shop,
     },
     {
-      path: '/status',
-      name: 'status',
-      component: OrderStatus,
-    },
-    {
       path: '/auth',
       name: 'auth',
       component: UserAuth,
