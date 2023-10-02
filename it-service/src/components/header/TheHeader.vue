@@ -41,6 +41,8 @@ export default {
 
 .logo {
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: calc(var(--size-header-height) * 0.95);
 }
 

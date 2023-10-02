@@ -11,6 +11,6 @@
 
   /* SIZES */
 
-  --size-header-height: 13rem;
-  --size-footer-height: 5rem;
+  --size-header-height: 300px;
+  --size-footer-height: 100px;
 }

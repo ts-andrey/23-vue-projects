@@ -34,7 +34,7 @@ export default {
 section{
   position: relative;
   z-index: 10;
-  padding: 40px 0;
+  padding: 60px 0 100px 0;
 }
 
 h1 {
@@ -47,7 +47,7 @@ h1 {
   padding:0;
 
   display: grid;
-  grid-template-columns: repeat(3, 17rem);
+  grid-template-columns: repeat(3, 290px);
   gap: 4rem 2rem;
 }
 
@@ -59,6 +59,6 @@ h1 {
   width: 100vw;
   z-index: 1;
   background: center / cover no-repeat url('../../assets/images/bg-home.webp');
-  opacity: 30%;
+  opacity: 23%;
 }
 </style>

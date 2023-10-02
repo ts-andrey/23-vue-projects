@@ -116,13 +116,14 @@ export default {
 
 h3 {
   text-align: center;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 1rem;
 }
 
 p {
   position: relative;
   margin: 30px 0 10px 0;
+  font-size: 16px;
 }
 
 p::before {
@@ -165,6 +166,7 @@ li li {
 }
 
 li li h4 {
+  font-size: 14px;
   margin: 0 0 7px 0;
 }
 

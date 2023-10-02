@@ -30,8 +30,8 @@ export default {
   position: relative;
   z-index: 10;
 
-  padding: 10px 0;
-  height: calc(var(--size-footer-height) + 20px);
+  padding: 30px 0;
+  min-height: var(--size-footer-height);
   display: flex;
   place-items: center;
   place-content: center;
@@ -39,8 +39,10 @@ export default {
 }
 
 .logo {
-  height: calc(var(--size-footer-height) * 0.95);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(var(--size-footer-height) * 0.9);
 }
 .nav {
   position: relative;

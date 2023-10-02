@@ -24,4 +24,5 @@ export default {
   justify-content: center;
   flex-grow: 1;
 }
+
 </style>
