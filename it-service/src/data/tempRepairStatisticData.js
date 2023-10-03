@@ -2,6 +2,7 @@ export default [
   { type: `PC's`, amount: '347' },
   { type: 'monitors', amount: '91' },
   { type: 'keyboards', amount: '114' },
+  { type: 'printers', amount: '78' },
   { type: 'mices', amount: '73' },
   { type: 'speakers', amount: '118' },
   { type: 'microphones', amount: '37' },

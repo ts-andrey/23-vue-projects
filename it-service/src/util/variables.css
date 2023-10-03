@@ -18,4 +18,9 @@
   /* PADDINGS / MARGINS */
 
   --padding-section-default: 60px 0 100px 0;
+
+
+  /* TIMINGS */
+
+  --time-animation-duration: .3s;
 }

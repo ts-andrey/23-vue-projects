@@ -76,7 +76,7 @@ export default {
   border: 1px dotted var(--color-main--light);
   border-radius: 5px;
 
-  transition: all 0.3s;
+  transition: all var(--time-animation-duration);
 }
 
 .nav li:hover {

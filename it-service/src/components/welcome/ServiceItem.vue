@@ -1,6 +1,6 @@
 <template>
   <li class="serviceItem">
-    <router-link :to=link>
+    <router-link :to="link">
       <base-card>
         <div class="wrapper">
           <h3>{{ name }}</h3>
@@ -133,6 +133,7 @@ p::before {
   left: 0;
   border-top: 1px dotted var(--color-main--light);
   width: 100%;
+  transition: all var(--time-animation-duration);
 }
 
 .icon {
@@ -173,5 +174,24 @@ li li h4 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+li .card {
+  transition: all var(--time-animation-duration);
+}
+li .card:hover {
+  border: 1px dotted var(--color-main--attract);
+}
+
+li svg {
+  transition: all var(--time-animation-duration);
+}
+
+li:hover svg {
+  fill: var(--color-main--attract);
+}
+
+li:hover p::before {
+  border-top: 1px dotted var(--color-main--attract);
 }
 </style>
