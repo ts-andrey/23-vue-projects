@@ -53,7 +53,7 @@ export default {
   height: 100%;
   width: 100vw;
   z-index: 1;
-  background: center / cover no-repeat url('../../assets/images/bg-header.webp');
+  background: center / cover no-repeat url('../../assets/images/bg/bg-header.webp');
   opacity: 40%;
 }
 

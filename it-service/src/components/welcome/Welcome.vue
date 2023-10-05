@@ -39,7 +39,7 @@ section {
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: var(--size-font-header-main);
   margin-bottom: 40px;
 }
 .services {
@@ -58,7 +58,7 @@ h1 {
   height: 100%;
   width: 100vw;
   z-index: 1;
-  background: center / cover no-repeat url('../../assets/images/bg-home.webp');
+  background: center / cover no-repeat url('../../assets/images/bg/bg-home.webp');
   opacity: 23%;
 }
 </style>

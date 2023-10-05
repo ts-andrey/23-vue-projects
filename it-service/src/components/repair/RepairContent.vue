@@ -35,6 +35,7 @@ export default {
 
 <style scoped>
 h2 {
+  font-size: var(--size-font-header-second);
   width: 800px;
 }
 

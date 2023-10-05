@@ -37,6 +37,7 @@ export default {
 <style scoped>
 h1 {
   margin-bottom: 20px;
+  font-size: var(--size-font-header-main);
 }
 .repair {
   padding: var(--padding-section-default);

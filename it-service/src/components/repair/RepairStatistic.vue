@@ -22,6 +22,7 @@ section {
 }
 
 h2 {
+  font-size: var(--size-font-header-second);
   margin-bottom: 20px;
 }
 

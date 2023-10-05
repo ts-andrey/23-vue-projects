@@ -12,6 +12,9 @@
 <script></script>
 
 <style scoped>
+h2 {
+  font-size: var(--size-font-header-second);
+}
 .control {
   margin: 20px 0;
   display: flex;
@@ -19,7 +22,7 @@
   justify-content: center;
   gap: 0 8px;
 
-  font-size: 16px;
+  font-size: 18px;
 }
 
 input {

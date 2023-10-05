@@ -75,7 +75,7 @@ a {
   height: 100%;
   width: 100vw;
   z-index: 1;
-  background: bottom / cover no-repeat url('../../assets/images/bg-header.webp');
+  background: bottom / cover no-repeat url('../../assets/images/bg/bg-header.webp');
   opacity: 40%;
 }
 </style>
