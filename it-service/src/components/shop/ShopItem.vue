@@ -33,6 +33,10 @@ li {
   border-radius: 8px;
 }
 
+.title {
+  text-align: center;
+}
+
 .descr {
   line-height: 160%;
 }
