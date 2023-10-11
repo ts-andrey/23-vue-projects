@@ -1,44 +1,51 @@
+import Apple_iPhone_XR from '../../assets/images/store/phones/Apple_iPhone_XR.webp';
+import Digma_Linx_X1_3G from '../../assets/images/store/phones/Digma_Linx_X1_3G.webp';
+import Doogee_BL5500_Lite from '../../assets/images/store/phones/Doogee_BL5500_Lite.webp';
+import HONOR_8X_JSN_L21 from '../../assets/images/store/phones/HONOR_8X_JSN_L21.webp';
+import MEIZU_M5 from '../../assets/images/store/phones/MEIZU_M5.webp';
+import Samsung_Galaxy_S8 from '../../assets/images/store/phones/Samsung_Galaxy_S8+.webp';
+
 export default [
   {
     model: 'MEIZU M5',
     description:
-      'OS: Android. Durable and beautiful; Polycarbonate body; 13-megapixel camera; Phase detection AF; 2GB/3GB RAM; 16GB/32GB internal storage; Dual SIM support; Dual standby mode; 2.5D contoured glass; Fully-laminated 5.2-inch display; mTouch; Fingerprint sensor..',
+      'Android, 5.2" IPS screen (720x1280), Mediatek MT6750, 2 GB RAM, 16 GB memory, memory card support, 13 MP camera, 3070 mAh battery, 2 SIM (nano-SIM)',
     price: '71',
-    image: null,
+    image: MEIZU_M5,
   },
   {
     model: 'Doogee BL5500 Lite',
     description:
-      'OS: Android; Processor: Processor (Clock): Quad-Core 1.3GHz ARM Cortex A53; RAM: 2GB; Storage: 16GB; Display: Screen (Size & Type): 6.19 inches IPS, HD+ Display; Camera: Camera Overview (Back/Front): 13 MP + 8 MP / 5 MP; Battery: Non-Removable 5,500 mAh Lithium-Polymer.',
+      'Android, 6.19" IPS screen (720x1500), Mediatek MT6739, 2 GB RAM, 16 GB memory, memory card support, 13 MP camera, 5500 mAh battery, 2 SIM (nano-SIM)',
     price: '50',
-    image: null,
+    image: Doogee_BL5500_Lite,
   },
   {
     model: 'Digma Linx X1 3G',
     description:
-      'OS: Android. Mobile phone Digma Linx X1 3G LS4050MG. Rechargeable battery 2000 mAh Dimensions 71.3 x 142.8 x 9.7 mm. Front Camera 1.92 Mp, 1600 x 1200 pixels, 640 x 480 pixels.',
+      'Android, 5" IPS screen (720x1280), Mediatek MT6580, 1 GB RAM, 16 GB memory, memory card support, 8 MP camera, 2000 mAh battery, 2 SIM (nano-SIM)',
     price: '124',
-    image: null,
+    image: Digma_Linx_X1_3G,
   },
   {
     model: 'Apple iPhone XR',
     description:
-      'Released: Oct 26, 2018; Display: 6.1 inches. 1792 x 828 pixels; Camera: 12 MP (Single camera) 7 MP front; Hardware: Apple A12 Bionic. 3GB RAM; Storage: 64GB, not expandable; Battery: 2942 mAh; OS: iOS 15.x.',
+      'Apple iOS, 6.1" IPS screen (828x1792), Apple A12 Bionic, 3 GB RAM, 64 GB memory, 12 MP camera, 2942 mAh battery, 1 SIM (nano-SIM/eSIM), IP67 waterproof',
     price: '238',
-    image: null,
+    image: Apple_iPhone_XR,
   },
   {
     model: 'HONOR 8X JSN-L21',
     description:
-      'Released: Oct 10, 2018; Display: 6.5 inches. 2340 x 1080 pixels; Camera: 20 MP (Dual camera) 16 MP front; Hardware: HiSilicon Kirin. 4GB RAM; Storage: 128GB, microSDXC; Battery: 3750 mAh;  OS: Android 9.0 Pie. Emotion UI.',
+      'Android, 6.5" IPS screen (1080x2340), HiSilicon Kirin 710, 4 GB RAM, 64 GB memory, memory card support, 20 MP camera, 3750 mAh battery, 2 SIM (nano-SIM)',
     price: '89',
-    image: null,
+    image: HONOR_8X_JSN_L21,
   },
   {
     model: 'Samsung Galaxy S8+',
     description:
-      'Released: Apr 21, 2017; Display: 5.8 inches. 2960 x 1440 pixels; Camera: 12 MP (Single camera) 8 MP front; Hardware: Qualcomm Snapdragon 835. 4GB RAM; Storage: 64GB, microSDXC; Battery: 3000 mAh; OS: Android 9.0 Pie. Samsung One UI.',
+      'Android, 6.2" AMOLED screen (1440x2960), Exynos 8895, 4 GB RAM, 64 GB memory, memory card support, 12 MP camera, 3500 mAh battery, 2 SIM (nano-SIM), IP68 waterproof',
     price: '148',
-    image: null,
+    image: Samsung_Galaxy_S8,
   },
 ];
