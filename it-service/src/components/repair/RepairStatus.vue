@@ -1,12 +1,12 @@
 <template>
-  <section>
+  <div class="container">
     <h2>You can input below tne number of your order and check it's status!</h2>
     <div class="control">
       <label for="order">Your order number:</label>
       <input type="text" name="order" id="order" placeholder="Your order number" />
       <button class="btn">Check status</button>
     </div>
-  </section>
+  </div>
 </template>
 
 <script></script>

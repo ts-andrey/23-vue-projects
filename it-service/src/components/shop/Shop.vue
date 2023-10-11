@@ -47,7 +47,6 @@ export default {
 
 <style scoped>
 section {
-  padding: var(--padding-section-default);
   max-width: 1200px;
 }
 

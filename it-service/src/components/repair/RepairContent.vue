@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div class="container">
     <h2>
       We understand that all customers wants their orders to be repaired as fast and as best as possible and we are
       happy to help you with that. We just need you to understand what it takes to make it happen from our side:
@@ -20,7 +20,7 @@
     <div>
       <h2>Not all processes may be necessary, but it is usually what is needed to fix something.</h2>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

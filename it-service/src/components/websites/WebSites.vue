@@ -36,7 +36,6 @@ export default {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: var(--padding-section-default);
 }
 
 .video {

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <div class="container">
     <h2>Our shop is successfully repaired:</h2>
     <ul class="stat">
       <li v-for="item in data" class="item">
@@ -7,7 +7,7 @@
         <span>{{ item.amount }}</span>
       </li>
     </ul>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-section {
+.container {
   padding: 30px 0;
 }
 

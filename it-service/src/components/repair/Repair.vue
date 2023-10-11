@@ -40,8 +40,6 @@ h1 {
   font-size: var(--size-font-header-main);
 }
 .repair {
-  padding: var(--padding-section-default);
-
   letter-spacing: 0.45px;
 }
 

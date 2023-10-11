@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .main {
   position: relative;
   display: flex;
@@ -25,4 +25,7 @@ export default {
   flex-grow: 1;
 }
 
+section {
+  padding: var(--padding-section-default);
+}
 </style>

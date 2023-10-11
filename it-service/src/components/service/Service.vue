@@ -60,9 +60,6 @@ export default {
 </script>
 
 <style scoped>
-section {
-  padding: var(--padding-section-default);
-}
 
 .container {
   max-width: 800px;

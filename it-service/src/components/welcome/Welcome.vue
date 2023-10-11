@@ -34,7 +34,6 @@ export default {
 section {
   position: relative;
   z-index: 10;
-  padding: var(--padding-section-default);
 }
 
 h1 {

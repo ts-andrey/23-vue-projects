@@ -45,11 +45,6 @@ const router = createRouter({
       component: UserAuth,
     },
     {
-      path: '/register',
-      name: 'orderRegistration',
-      component: OrderRegistration,
-    },
-    {
       path: '/contacts',
       name: 'contacts',
       component: Contacts,
