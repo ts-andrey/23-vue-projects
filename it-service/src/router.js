@@ -5,8 +5,8 @@ import Repair from './pages/Repair.vue';
 import Service from './pages/Service.vue';
 import WebSites from './pages/WebSites.vue';
 import Shop from './pages/Shop.vue';
-import OrderStatus from './pages/OrderStatus.vue';
-import OrderRegistration from './pages/OrderRegistraiton.vue';
+import Register from './pages/Register.vue'
+
 import UserAuth from './pages/UserAuth.vue';
 import Contacts from './pages/Contacts.vue';
 import NotFound from './pages/NotFound.vue';
@@ -43,6 +43,11 @@ const router = createRouter({
       path: '/auth',
       name: 'auth',
       component: UserAuth,
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: Register,
     },
     {
       path: '/contacts',

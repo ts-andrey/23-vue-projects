@@ -5,5 +5,6 @@ export default [
   { name: 'Websites', link: '/web' },
   { name: 'Shop', link: '/shop' },
   { name: 'Login', link: '/auth' },
+  { name: 'Register', link: '/register' },
   { name: 'Contacts', link: '/contacts' },
 ];

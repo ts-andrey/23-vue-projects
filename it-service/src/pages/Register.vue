@@ -1,12 +1,12 @@
 <template>
-  <Registration />
+  <Register />
 </template>
 
 <script>
-import Registration from '../components/order/Registration.vue';
+import Register from '../components/register/Register.vue';
 export default {
   components: {
-    Registration,
+    Register,
   },
 };
 </script>
