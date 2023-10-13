@@ -5,7 +5,7 @@ import Repair from './pages/Repair.vue';
 import Service from './pages/Service.vue';
 import WebSites from './pages/WebSites.vue';
 import Shop from './pages/Shop.vue';
-import Register from './pages/Register.vue'
+import Admin from './pages/Admin.vue';
 
 import UserAuth from './pages/UserAuth.vue';
 import Contacts from './pages/Contacts.vue';
@@ -45,9 +45,9 @@ const router = createRouter({
       component: UserAuth,
     },
     {
-      path: '/register',
-      name: 'register',
-      component: Register,
+      path: '/admin',
+      name: 'admin',
+      component: Admin,
     },
     {
       path: '/contacts',
