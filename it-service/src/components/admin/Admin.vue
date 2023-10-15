@@ -1,24 +1,48 @@
 <template>
   <section>
-    <h1>This is an admin page</h1>
-    <nav>
-      <ul>
-        <li>
-          <rooter-link to=""></rooter-link>
-        </li>
-        <li>
-          <rooter-link to=""></rooter-link>
-        </li>
-        <li>
-          <rooter-link to=""></rooter-link>
-        </li>
-      </ul>
-    </nav>
+    <h1>This is admin area</h1>
+    <BaseNav :linksData="linksData" />
+    <router-view></router-view>
   </section>
 </template>
 
 <script>
-export default {};
+import BaseNav from '../../ui/BaseNav.vue';
+import adminLinksData from '../../data/adminLinksData';
+export default {
+  components: {
+    BaseNav,
+  },
+  data() {
+    return {
+      linksData: adminLinksData,
+    };
+  },
+};
 </script>
 
-<style scoped></style>
+<style scoped>
+section {
+  padding-top: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--color-main--attract);
+}
+
+h1 {
+  font-size: var(--size-font-header-main);
+}
+
+h2 {
+  font-size: var(--size-font-header-second);
+}
+
+nav {
+  margin-bottom: 30px;
+  color: var(--color-main--attract);
+}
+</style>

@@ -3,20 +3,18 @@
     <div class="logo">
       <base-logo />
     </div>
-    <nav class="nav">
-      <ul>
-        <li v-for="link in linksArr">
-          <router-link :to="link.link">{{ link.name }}</router-link>
-        </li>
-      </ul>
-    </nav>
+    <BaseNav :linksData="linksArr"/>
     <div class="bg"></div>
   </header>
 </template>
 
 <script>
+import BaseNav from '../../ui/BaseNav.vue';
 import linksData from '../../data/linksData';
 export default {
+  components: {
+    BaseNav,
+  },
   data() {
     return {
       linksArr: linksData,

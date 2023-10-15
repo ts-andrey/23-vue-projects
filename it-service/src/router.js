@@ -11,6 +11,11 @@ import UserAuth from './pages/UserAuth.vue';
 import Contacts from './pages/Contacts.vue';
 import NotFound from './pages/NotFound.vue';
 
+import NewOrder from './components/admin/NewOrder.vue';
+import NewShopItem from './components/admin/NewShopItem.vue';
+import NewWebItem from './components/admin/NewWebItem.vue';
+import Orders from './components/admin/Orders.vue';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -48,6 +53,12 @@ const router = createRouter({
       path: '/admin',
       name: 'admin',
       component: Admin,
+      children: [
+        { path: 'orders', component: Orders },
+        { path: 'newOrder', component: NewOrder },
+        { path: 'newShopItem', component: NewShopItem },
+        { path: 'newWebItem', component: NewWebItem },
+      ],
     },
     {
       path: '/contacts',
