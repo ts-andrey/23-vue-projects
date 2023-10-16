@@ -11,6 +11,9 @@ dependencies:
   vue-router:
     specifier: ^4.2.4
     version: 4.2.4(vue@3.3.4)
+  vue-yandex-maps:
+    specifier: ^0.12.7
+    version: 0.12.7
 
 devDependencies:
   '@vitejs/plugin-vue':
@@ -458,6 +461,10 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.3.4
+    dev: false
+
+  /vue-yandex-maps@0.12.7:
+    resolution: {integrity: sha512-xP9juQCF4MQvMUMcPUrPyHQoaKr4ULw/Z1Tcmte4nfcbelg1SXksROxAQYB2woz5EwSOnO5SEEigX0AkWE0suA==}
     dev: false
 
   /vue@3.3.4:

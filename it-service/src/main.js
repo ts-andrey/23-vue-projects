@@ -11,6 +11,6 @@ const app = createApp(App);
 
 app.use(router);
 app.component('base-card', BaseCard);
-app.component('base-logo', BaseLogo)
+app.component('base-logo', BaseLogo);
 
 app.mount('#app');
