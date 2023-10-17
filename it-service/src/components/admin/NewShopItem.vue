@@ -1,5 +1,6 @@
 <template>
-  <h2>New Shop Item component</h2>
+  <h2>New Shop Item form:</h2>
+  
 </template>
 
 <script></script>

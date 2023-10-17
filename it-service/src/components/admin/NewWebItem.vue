@@ -1,5 +1,5 @@
 <template>
-  <h2>New Web Item component</h2>
+  <h2>New Web Item form:</h2>
 </template>
 
 <script></script>

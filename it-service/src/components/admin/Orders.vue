@@ -13,6 +13,7 @@
       <div class="status-wrapper">
         <label for="status">Change status</label>
         <select name="status" id="status" :value="order.status" @change="setStatus">
+          <option value="in examination process">in examination process</option>
           <option value="in a repairing process">in a repairing process</option>
           <option value="in a testing process">in a testing process</option>
           <option value="awaiting for spare parts">awaiting for spare parts</option>

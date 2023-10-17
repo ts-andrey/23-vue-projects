@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>This is admin area</h1>
+    <h1>Administrative Sections</h1>
     <BaseNav :linksData="linksData" />
     <router-view></router-view>
   </section>
@@ -9,6 +9,7 @@
 <script>
 import BaseNav from '../../ui/BaseNav.vue';
 import adminLinksData from '../../data/adminLinksData';
+
 export default {
   components: {
     BaseNav,
@@ -23,7 +24,7 @@ export default {
 
 <style scoped>
 section {
-  padding-top: 0;
+  padding-top: 10px;
 }
 
 h1,
