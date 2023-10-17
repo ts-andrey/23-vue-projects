@@ -7,7 +7,7 @@
   <ul v-if="filteredOrders.length">
     <li v-for="order in filteredOrders">
       <div class="wrapper">
-        <span>{{ order.order }}</span>
+        <span>{{ order.id }}</span>
         <span>{{ order.status }}</span>
       </div>
       <div class="status-wrapper">
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     filteredOrders() {
-      return this.orders.filter(order => order.order.startsWith(this.filterValue));
+      return this.orders.filter(order => order.id.startsWith(this.filterValue));
     },
   },
   methods: {
@@ -50,7 +50,7 @@ export default {
       const orderDataItem = orderItem.children[0];
       const order = orderDataItem.children[0].innerText;
 
-      const index = this.filteredOrders.map(el => el.order).indexOf(order);
+      const index = this.filteredOrders.map(el => el.id).indexOf(order);
       this.filteredOrders[index].status = newValue;
     },
   },
