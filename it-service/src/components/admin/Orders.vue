@@ -5,14 +5,14 @@
     <input id="filter" type="text" @keyup="filter" :value="filterValue" />
   </div>
   <ul v-if="filteredOrders.length">
-    <li v-for="order in filteredOrders">
+    <li v-for="order in filteredOrders" :key="order.id">
       <div class="wrapper">
         <span>{{ order.id }}</span>
         <span>{{ order.status }}</span>
       </div>
       <div class="status-wrapper">
-        <label for="status">Change status</label>
-        <select name="status" id="status" :value="order.status" @change="setStatus">
+        <p>Change status</p>
+        <select name="status" :value="order.status" @change="setStatus">
           <option value="in examination process">in examination process</option>
           <option value="in a repairing process">in a repairing process</option>
           <option value="in a testing process">in a testing process</option>
@@ -61,7 +61,7 @@ export default {
 .filter-wrapper {
   margin-bottom: 30px;
 }
-label {
+label,p {
   margin-right: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;

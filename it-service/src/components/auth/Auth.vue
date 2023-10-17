@@ -5,11 +5,11 @@
     <form @submit.prevent="login" class="auth">
       <div class="control">
         <label for="username">Username</label>
-        <input type="text" id="username" v-model="username" />
+        <input type="text" id="username" v-model="username" autocomplete="on" />
       </div>
       <div class="control">
         <label for="password">Password</label>
-        <input type="password" id="password" v-model="password" />
+        <input type="password" id="password" v-model="password" autocomplete="on" />
       </div>
       <base-button>Login</base-button>
     </form>
@@ -71,5 +71,4 @@ input {
   padding: 5px 10px;
   font-size: 18px;
 }
-
 </style>

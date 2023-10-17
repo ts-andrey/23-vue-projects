@@ -3,11 +3,11 @@
   <form @submit.prevent="addShopItem" class="form">
     <div class="control">
       <label for="model">Model</label>
-      <input type="text" id="model" v-model="model" />
+      <input type="text" id="model" v-model="model" autocomplete="on"/>
     </div>
     <div class="control">
       <label for="description">Description</label>
-      <textarea name="description" id="description" cols="30" rows="10" v-model="description"></textarea>
+      <textarea name="description" id="description" cols="30" rows="10" v-model="description" autocomplete="of"></textarea>
     </div>
     <div class="control">
       <label for="price">Price</label>

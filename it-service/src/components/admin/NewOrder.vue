@@ -3,27 +3,27 @@
   <form @submit.prevent="addOrder" class="form">
     <div class="control">
       <label for="customer">Customer</label>
-      <input type="text" id="customer" v-model="customer" />
+      <input type="text" id="customer" v-model="customer" autocomplete="on"/>
     </div>
     <div class="control">
       <label for="phone">Phone Number</label>
-      <input type="text" id="phone" v-model="phone" />
+      <input type="text" id="phone" v-model="phone" autocomplete="on"/>
     </div>
     <div class="control">
       <label for="mail">E-Mail</label>
-      <input type="text" id="mail" v-model="mail" />
+      <input type="text" id="mail" v-model="mail" autocomplete="on"/>
     </div>
 
     <div class="control">
       <label for="appliance">Appliance</label>
-      <input type="text" id="appliance" v-model="appliance" />
+      <input type="text" id="appliance" v-model="appliance" autocomplete="on"/>
     </div>
     <div class="control">
       <label for="details">Details</label>
-      <textarea id="details" cols="30" rows="10" v-model="details"></textarea>
+      <textarea id="details" cols="30" rows="10" v-model="details" autocomplete="of"></textarea>
     </div>
     <div class="control">
-      <label for="sttatus">Pick Appliance Status</label>
+      <label for="status">Pick Appliance Status</label>
       <select name="status" id="status" v-model="status">
         <option value="registered">registered</option>
         <option value="in examination process">in examination process</option>
