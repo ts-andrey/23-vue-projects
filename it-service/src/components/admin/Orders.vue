@@ -52,8 +52,6 @@ export default {
       const orderDataItem = orderItem.children[0];
       const orderID = orderDataItem.children[0].innerText;
 
-      // const index = this.filteredOrders.map(el => el.id).indexOf(orderID);
-      // this.filteredOrders[index].status = newStatus;
       this.$store.dispatch('orders/setStatus', {id:orderID, newStatus: newStatus})
     },
   },

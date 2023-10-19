@@ -10,7 +10,7 @@
       <textarea name="description" id="description" cols="30" rows="10" v-model="description" autocomplete="of"></textarea>
     </div>
     <div class="control">
-      <label for="image">Image</label>
+      <label for="image">Image link</label>
       <input type="text" id="image" v-model="image" />
     </div>
     <base-button>Add New Web Item</base-button>

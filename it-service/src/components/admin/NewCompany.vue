@@ -17,7 +17,7 @@
       ></textarea>
     </div>
     <div class="control">
-      <label for="image">Image</label>
+      <label for="image">Image link</label>
       <input type="text" id="image" v-model="image" />
     </div>
     <base-button>Add New Company</base-button>

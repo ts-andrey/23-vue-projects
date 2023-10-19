@@ -1,20 +1,36 @@
 <template>
   <h2>New Shop Item form:</h2>
   <form @submit.prevent="addShopItem" class="form">
+    <div class="itemType-wrapper">
+      <p>Select Shop Item Type</p>
+      <select name="itemType" v-model="type">
+        <option value="phone">phone</option>
+        <option value="notebook">notebook</option>
+        <option value="pcComponent">PC Component</option>
+        <option value="laptop">laptop</option>
+      </select>
+    </div>
     <div class="control">
       <label for="model">Model</label>
-      <input type="text" id="model" v-model="model" autocomplete="on"/>
+      <input type="text" id="model" v-model="model" autocomplete="on" />
     </div>
     <div class="control">
       <label for="description">Description</label>
-      <textarea name="description" id="description" cols="30" rows="10" v-model="description" autocomplete="of"></textarea>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+        v-model="description"
+        autocomplete="of"
+      ></textarea>
     </div>
     <div class="control">
       <label for="price">Price</label>
       <input type="number" id="price" v-model="price" />
     </div>
     <div class="control">
-      <label for="image">Image</label>
+      <label for="image">Image link</label>
       <input type="text" id="image" v-model="image" />
     </div>
     <base-button>Add New Shop Item</base-button>
@@ -27,6 +43,7 @@ import { v4 as uuidv4 } from 'uuid';
 export default {
   data() {
     return {
+      type: 'phone',
       model: '',
       description: '',
       price: 0,
@@ -38,6 +55,7 @@ export default {
       const uniqueID = uuidv4();
       const date = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
       const shopItem = {
+        type: this.type,
         model: this.model,
         description: this.description,
         price: this.price,
@@ -46,9 +64,11 @@ export default {
         id: uniqueID,
       };
       console.log(shopItem);
+      this.$store.dispatch('shop/addShopItem', shopItem);
       this.clearForm();
     },
     clearForm() {
+      this.type = 'phone';
       this.model = '';
       this.description = '';
       this.price = 0;
@@ -77,6 +97,18 @@ h2 {
   border-left: 1px ridge var(--color-main--light);
   border-right: 1px ridge var(--color-main--light);
   border-radius: 10px;
+}
+
+.itemType-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+select {
+  margin-top: 5px;
+  padding: 5px;
 }
 
 .control {
