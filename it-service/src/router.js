@@ -15,6 +15,7 @@ import AdminWelcome from './components/admin/AdminWelcome.vue';
 import NewOrder from './components/admin/NewOrder.vue';
 import NewShopItem from './components/admin/NewShopItem.vue';
 import NewWebItem from './components/admin/NewWebItem.vue';
+import NewCompany from './components/admin/NewCompany.vue';
 import Orders from './components/admin/Orders.vue';
 
 const router = createRouter({
@@ -53,6 +54,7 @@ const router = createRouter({
         { path: 'newOrder', component: NewOrder },
         { path: 'newShopItem', component: NewShopItem },
         { path: 'newWebItem', component: NewWebItem },
+        { path: 'newCompany', component: NewCompany },
         { path: 'welcome', component: AdminWelcome},
       ],
     },

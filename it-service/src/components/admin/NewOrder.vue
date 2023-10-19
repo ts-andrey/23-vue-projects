@@ -3,20 +3,20 @@
   <form @submit.prevent="addOrder" class="form">
     <div class="control">
       <label for="customer">Customer</label>
-      <input type="text" id="customer" v-model="customer" autocomplete="on"/>
+      <input type="text" id="customer" v-model="customer" autocomplete="on" />
     </div>
     <div class="control">
       <label for="phone">Phone Number</label>
-      <input type="text" id="phone" v-model="phone" autocomplete="on"/>
+      <input type="text" id="phone" v-model="phone" autocomplete="on" />
     </div>
     <div class="control">
       <label for="mail">E-Mail</label>
-      <input type="text" id="mail" v-model="mail" autocomplete="on"/>
+      <input type="text" id="mail" v-model="mail" autocomplete="on" />
     </div>
 
     <div class="control">
       <label for="appliance">Appliance</label>
-      <input type="text" id="appliance" v-model="appliance" autocomplete="on"/>
+      <input type="text" id="appliance" v-model="appliance" autocomplete="on" />
     </div>
     <div class="control">
       <label for="details">Details</label>
@@ -67,6 +67,7 @@ export default {
         id: uniqueID,
       };
       console.log(order);
+      this.$store.dispatch('orders/addOrder', order);
       this.clearForm();
     },
     clearForm() {
@@ -117,5 +118,4 @@ textarea {
   font-size: 18px;
   width: 400px;
 }
-
 </style>

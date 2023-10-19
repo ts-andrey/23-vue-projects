@@ -27,20 +27,25 @@
 <script>
 import ShopList from './ShopList.vue';
 
-import laptopsData from '../../data/store/laptopsData';
-import notebooksData from '../../data/store/notebookData';
-import pcComponentsData from '../../data/store/pcComponentsData';
-import phonesData from '../../data/store/phoneData';
-
 export default {
   components: { ShopList },
-  data() {
-    return {
-      laptops: laptopsData,
-      notbooks: notebooksData,
-      pcComponents: pcComponentsData,
-      phones: phonesData,
-    };
+  computed: {
+    laptops() {
+      const data = this.$store.getters['shop/getLaptops'];
+      return data;
+    },
+    notbooks() {
+      const data = this.$store.getters['shop/getNotebooks'];
+      return data;
+    },
+    pcComponents() {
+      const data = this.$store.getters['shop/getPCComponents'];
+      return data;
+    },
+    phones() {
+      const data = this.$store.getters['shop/getPhones'];
+      return data;
+    },
   },
 };
 </script>

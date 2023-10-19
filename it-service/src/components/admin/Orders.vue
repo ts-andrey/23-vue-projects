@@ -26,15 +26,17 @@
 </template>
 
 <script>
-import ordersData from '../../data/admin/ordersData';
 export default {
   data() {
     return {
       filterValue: '',
-      orders: ordersData,
     };
   },
   computed: {
+    orders() {
+      const data = this.$store.getters['orders/getData'];
+      return data;
+    },
     filteredOrders() {
       return this.orders.filter(order => order.id.startsWith(this.filterValue));
     },
@@ -44,14 +46,15 @@ export default {
       this.filterValue = event.target.value;
     },
     setStatus(event) {
-      const newValue = event.target.value;
+      const newStatus = event.target.value;
 
       const orderItem = event.target.parentNode.parentNode;
       const orderDataItem = orderItem.children[0];
-      const order = orderDataItem.children[0].innerText;
+      const orderID = orderDataItem.children[0].innerText;
 
-      const index = this.filteredOrders.map(el => el.id).indexOf(order);
-      this.filteredOrders[index].status = newValue;
+      // const index = this.filteredOrders.map(el => el.id).indexOf(orderID);
+      // this.filteredOrders[index].status = newStatus;
+      this.$store.dispatch('orders/setStatus', {id:orderID, newStatus: newStatus})
     },
   },
 };
@@ -61,7 +64,8 @@ export default {
 .filter-wrapper {
   margin-bottom: 30px;
 }
-label,p {
+label,
+p {
   margin-right: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;

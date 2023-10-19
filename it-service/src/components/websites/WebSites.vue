@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import webDevData from '../../data/webDevData';
 export default {
-  data() {
-    return {
-      webData: webDevData,
-    };
+  computed: {
+    webData() {
+      const data = this.$store.getters['web/getData'];
+      return data;
+    },
   },
 };
 </script>
