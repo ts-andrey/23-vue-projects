@@ -48,19 +48,21 @@
 
 <script>
 import serviceCompanyData from '../../data/serviceCompanyData';
-import companyListData from '../../data/companyListData';
 export default {
   data() {
     return {
       companyServices: serviceCompanyData,
-      companyList: companyListData,
     };
+  },
+  computed: {
+    companyList() {
+      return this.$store.getters['company/getData'];
+    },
   },
 };
 </script>
 
 <style scoped>
-
 .container {
   max-width: 800px;
   margin-top: 80px;
@@ -158,7 +160,6 @@ ul {
   border-radius: 5px;
 }
 .company-item {
-
   border: 1px dotted var(--color-main--light);
   border-radius: 5px;
 

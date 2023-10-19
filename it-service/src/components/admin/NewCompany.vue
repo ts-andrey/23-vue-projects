@@ -1,6 +1,6 @@
 <template>
   <h2>Form for a new Company that works with us:</h2>
-  <form @submit.prevent="addShopItem" class="form">
+  <form @submit.prevent="addCompanyItem" class="form">
     <div class="control">
       <label for="company">Company</label>
       <input type="text" id="company" v-model="company" autocomplete="on" />
@@ -20,6 +20,10 @@
       <label for="image">Image link</label>
       <input type="text" id="image" v-model="image" />
     </div>
+    <div class="control">
+      <label for="cooperationTime">Cooperation Time</label>
+      <input type="text" id="cooperationTime" v-model="cooperationTime" />
+    </div>
     <base-button>Add New Company</base-button>
   </form>
 </template>
@@ -33,26 +37,30 @@ export default {
       company: '',
       description: '',
       image: '',
+      cooperationTime: 'Less than a year',
     };
   },
   methods: {
-    addShopItem() {
+    addCompanyItem() {
       const uniqueID = uuidv4();
       const date = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
-      const shopItem = {
+      const companyItem = {
         company: this.company,
         description: this.description,
         image: this.image,
+        cooperationTime: this.cooperationTime,
         date: date,
         id: uniqueID,
       };
-      console.log(shopItem);
+      console.log(companyItem);
+      this.$store.dispatch('company/addCompanyItem', companyItem);
       this.clearForm();
     },
     clearForm() {
       this.company = '';
       this.description = '';
       this.image = '';
+      this.cooperationTime = 'Less than a year';
     },
   },
 };
