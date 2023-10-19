@@ -11,6 +11,7 @@ const store = createStore({
     shop: shopState,
     web: webState,
     repair: repairState,
+    
   },
 });
 

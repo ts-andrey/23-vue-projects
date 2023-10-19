@@ -12,7 +12,6 @@ import RepairContent from './RepairContent.vue';
 import RepairStatistic from './RepairStatistic.vue';
 import RepairStatus from './RepairStatus.vue';
 
-import tempRepairData from '../../data/tempRepairStatisticData';
 import repairProcessesData from '../../data/repairProcessesData';
 
 export default {
@@ -23,13 +22,14 @@ export default {
   },
   data() {
     return {
-      statusData: [],
       repairProcesses: repairProcessesData,
     };
   },
-
-  created() {
-    this.statusData = tempRepairData;
+  computed: {
+    statusData() {
+      const data = this.$store.getters['repair/getData'];
+      return data;
+    },
   },
 };
 </script>

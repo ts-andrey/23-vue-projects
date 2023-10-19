@@ -3,11 +3,18 @@
   <form @submit.prevent="addWebItem" class="form">
     <div class="control">
       <label for="title">Title</label>
-      <input type="text" id="title" v-model="title" autocomplete="on"/>
+      <input type="text" id="title" v-model="title" autocomplete="on" />
     </div>
     <div class="control">
       <label for="description">Description</label>
-      <textarea name="description" id="description" cols="30" rows="10" v-model="description" autocomplete="of"></textarea>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="10"
+        v-model="description"
+        autocomplete="of"
+      ></textarea>
     </div>
     <div class="control">
       <label for="image">Image link</label>
@@ -40,6 +47,7 @@ export default {
         id: uniqueID,
       };
       console.log(webItem);
+      this.$store.dispatch('web/addWebItem', webItem);
       this.clearForm();
     },
     clearForm() {
