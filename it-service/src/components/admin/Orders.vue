@@ -12,7 +12,8 @@
       </div>
       <div class="status-wrapper">
         <p>Change status</p>
-        <select name="status" :value="order.status" @change="setStatus">
+        <select name="status" :value="order.status" @change="setStatus($event, order.id)">
+          <option value="registered">registered</option>
           <option value="in examination process">in examination process</option>
           <option value="in a repairing process">in a repairing process</option>
           <option value="in a testing process">in a testing process</option>
@@ -45,14 +46,9 @@ export default {
     filter(event) {
       this.filterValue = event.target.value;
     },
-    setStatus(event) {
+    setStatus(event, id) {
       const newStatus = event.target.value;
-
-      const orderItem = event.target.parentNode.parentNode;
-      const orderDataItem = orderItem.children[0];
-      const orderID = orderDataItem.children[0].innerText;
-
-      this.$store.dispatch('orders/setStatus', {id:orderID, newStatus: newStatus})
+      this.$store.dispatch('orders/setStatus', { id: id, newStatus: newStatus });
     },
   },
 };
@@ -100,6 +96,10 @@ h2 {
   text-align: center;
   color: var(--color-main--attract);
   font-size: var(--size-font-header-second);
+}
+
+span {
+  align-self: center;
 }
 
 span:first-of-type {
