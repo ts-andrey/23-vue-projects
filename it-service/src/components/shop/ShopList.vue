@@ -14,6 +14,7 @@ export default {
 
 <style scoped>
 ul {
+  list-style: none;
   padding: 90px 40px 40px 40px;
   display: grid;
   grid-template-columns: repeat(3, 30%);

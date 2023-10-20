@@ -32,14 +32,25 @@
       <h2>We successfully provide our services to the following companies:</h2>
       <ul class="company-list">
         <li v-for="company in companyList" class="company-item">
-          <a :href="company.link" target="_blank">
-            <h3 class="company-name">{{ company.name }}</h3>
-
-            <div class="company-image">
+          <div>
+            <a :href="company.link" target="_blank">
+              <h3 class="company-name">{{ company.name }}</h3>
+            </a>
+            <div class="company-image" @click="toggleItem(company)">
               <img :src="company.img" alt="company image" />
             </div>
             <p>time we have been providing our services: {{ company.cooperationTime }}</p>
-          </a>
+          </div>
+          <div v-if="company.isSpread" class="more-info">
+            <div class="info">
+              <div>Date:</div>
+              <div>{{ company.date }}</div>
+            </div>
+            <div class="info">
+              <div>Description:</div>
+              <div>{{company.description}}</div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -57,6 +68,11 @@ export default {
   computed: {
     companyList() {
       return this.$store.getters['company/getData'];
+    },
+  },
+  methods: {
+    toggleItem(item) {
+      item.isSpread = !item.isSpread;
     },
   },
 };
@@ -160,6 +176,7 @@ ul {
   border-radius: 5px;
 }
 .company-item {
+  padding: 10px 20px;
   border: 1px dotted var(--color-main--light);
   border-radius: 5px;
 
@@ -197,12 +214,29 @@ img {
 }
 
 a {
-  padding: 10px 20px;
   text-decoration: none;
   color: inherit;
 
   display: flex;
   flex-flow: column;
   align-items: center;
+}
+
+.more-info {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+
+  border: 1px dotted var(--color-main--attract);
+  border-radius: 5px;
 }
 </style>

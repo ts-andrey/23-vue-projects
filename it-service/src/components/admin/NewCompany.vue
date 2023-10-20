@@ -21,6 +21,10 @@
       <input type="text" id="image" v-model="image" />
     </div>
     <div class="control">
+      <label for="link">Company link</label>
+      <input type="text" id="link" v-model="link" />
+    </div>
+    <div class="control">
       <label for="cooperationTime">Cooperation Time</label>
       <input type="text" id="cooperationTime" v-model="cooperationTime" />
     </div>
@@ -34,9 +38,10 @@ import { v4 as uuidv4 } from 'uuid';
 export default {
   data() {
     return {
-      company: '',
+      name: '',
       description: '',
       image: '',
+      link: '',
       cooperationTime: 'Less than a year',
     };
   },
@@ -45,12 +50,14 @@ export default {
       const uniqueID = uuidv4();
       const date = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
       const companyItem = {
-        company: this.company,
+        name: this.name,
         description: this.description,
         image: this.image,
+        link: this.link,
         cooperationTime: this.cooperationTime,
         date: date,
         id: uniqueID,
+        isSpread: false,
       };
       console.log(companyItem);
       this.$store.dispatch('company/addCompanyItem', companyItem);

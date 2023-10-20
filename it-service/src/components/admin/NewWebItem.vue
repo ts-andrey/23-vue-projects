@@ -45,6 +45,7 @@ export default {
         image: this.image,
         date: date,
         id: uniqueID,
+        isSpread: false,
       };
       console.log(webItem);
       this.$store.dispatch('web/addWebItem', webItem);

@@ -65,6 +65,7 @@ export default {
         status: this.status,
         date: date,
         id: uniqueID,
+        isSpread: false,
       };
       console.log(order);
       this.$store.dispatch('orders/addOrder', order);

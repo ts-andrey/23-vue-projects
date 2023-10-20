@@ -12,6 +12,7 @@ export default [
       'Android, 5.2" IPS screen (720x1280), Mediatek MT6750, 2 GB RAM, 16 GB memory, memory card support, 13 MP camera, 3070 mAh battery, 2 SIM (nano-SIM)',
     price: '71',
     image: MEIZU_M5,
+    isSpread: false,
   },
   {
     model: 'Doogee BL5500 Lite',
@@ -19,6 +20,7 @@ export default [
       'Android, 6.19" IPS screen (720x1500), Mediatek MT6739, 2 GB RAM, 16 GB memory, memory card support, 13 MP camera, 5500 mAh battery, 2 SIM (nano-SIM)',
     price: '50',
     image: Doogee_BL5500_Lite,
+    isSpread: false,
   },
   {
     model: 'Digma Linx X1 3G',
@@ -26,6 +28,7 @@ export default [
       'Android, 5" IPS screen (720x1280), Mediatek MT6580, 1 GB RAM, 16 GB memory, memory card support, 8 MP camera, 2000 mAh battery, 2 SIM (nano-SIM)',
     price: '124',
     image: Digma_Linx_X1_3G,
+    isSpread: false,
   },
   {
     model: 'Apple iPhone XR',
@@ -33,6 +36,7 @@ export default [
       'Apple iOS, 6.1" IPS screen (828x1792), Apple A12 Bionic, 3 GB RAM, 64 GB memory, 12 MP camera, 2942 mAh battery, 1 SIM (nano-SIM/eSIM), IP67 waterproof',
     price: '238',
     image: Apple_iPhone_XR,
+    isSpread: false,
   },
   {
     model: 'HONOR 8X JSN-L21',
@@ -40,6 +44,7 @@ export default [
       'Android, 6.5" IPS screen (1080x2340), HiSilicon Kirin 710, 4 GB RAM, 64 GB memory, memory card support, 20 MP camera, 3750 mAh battery, 2 SIM (nano-SIM)',
     price: '89',
     image: HONOR_8X_JSN_L21,
+    isSpread: false,
   },
   {
     model: 'Samsung Galaxy S8+',
@@ -47,5 +52,6 @@ export default [
       'Android, 6.2" AMOLED screen (1440x2960), Exynos 8895, 4 GB RAM, 64 GB memory, memory card support, 12 MP camera, 3500 mAh battery, 2 SIM (nano-SIM), IP68 waterproof',
     price: '148',
     image: Samsung_Galaxy_S8,
+    isSpread: false,
   },
 ];

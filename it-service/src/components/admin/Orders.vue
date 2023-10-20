@@ -6,21 +6,31 @@
   </div>
   <ul v-if="filteredOrders.length">
     <li v-for="order in filteredOrders" :key="order.id">
-      <div class="wrapper">
-        <span>{{ order.id }}</span>
-        <span>{{ order.status }}</span>
+      <div class="data-wrapper">
+        <div class="wrapper">
+          <span @click="toggleItem(order)">{{ order.id }}</span>
+          <span>{{ order.status }}</span>
+        </div>
+        <div class="status-wrapper">
+          <p>Change status</p>
+          <select name="status" :value="order.status" @change="setStatus($event, order.id)">
+            <option value="registered">registered</option>
+            <option value="in examination process">in examination process</option>
+            <option value="in a repairing process">in a repairing process</option>
+            <option value="in a testing process">in a testing process</option>
+            <option value="awaiting for spare parts">awaiting for spare parts</option>
+            <option value="ready">ready</option>
+            <option value="completed">completed</option>
+          </select>
+        </div>
       </div>
-      <div class="status-wrapper">
-        <p>Change status</p>
-        <select name="status" :value="order.status" @change="setStatus($event, order.id)">
-          <option value="registered">registered</option>
-          <option value="in examination process">in examination process</option>
-          <option value="in a repairing process">in a repairing process</option>
-          <option value="in a testing process">in a testing process</option>
-          <option value="awaiting for spare parts">awaiting for spare parts</option>
-          <option value="ready">ready</option>
-          <option value="completed">completed</option>
-        </select>
+      <div v-if="order.isSpread" class="more-info">
+        <div class="info"><div class="descr">Date:</div>{{ order.date }}</div>
+        <div class="info"><div class="descr">Appliance:</div> {{ order.appliance }}</div>
+        <div class="info"><div class="descr">Details:</div>{{ order.details }}</div>
+        <div class="info"><div class="descr">Customer:</div>{{ order.customer }}</div>
+        <div class="info"><div class="descr">Mail:</div>{{ order.mail }}</div>
+        <div class="info"><div class="descr">Phone:</div>{{ order.phone }}</div>
       </div>
     </li>
   </ul>
@@ -50,6 +60,9 @@ export default {
       const newStatus = event.target.value;
       this.$store.dispatch('orders/setStatus', { id: id, newStatus: newStatus });
     },
+    toggleItem(order) {
+      order.isSpread = !order.isSpread;
+    },
   },
 };
 </script>
@@ -78,12 +91,20 @@ ul {
 }
 
 li {
+  max-width: 800px;
   padding: 5px 10px;
   border: 1px dotted var(--color-main--light);
   border-radius: 5px;
 
   display: flex;
+  flex-flow: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.data-wrapper {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -113,6 +134,10 @@ span:last-of-type {
   color: var(--color-main--light);
 }
 
+span:first-of-type:hover {
+  cursor: pointer;
+}
+
 .status-wrapper {
   margin-left: 20px;
   display: flex;
@@ -124,4 +149,23 @@ select {
   margin-top: 5px;
   padding: 5px;
 }
+
+.more-info {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+
+  border: 1px dotted var(--color-main--attract);
+  border-radius: 5px;
+}
+
 </style>

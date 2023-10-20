@@ -10,8 +10,20 @@
       <li v-for="web in webData">
         <a :href="web.link" target="_blank">
           <h3>{{ web.name }}</h3>
-          <img :src="web.img" :alt="web.name" />
         </a>
+        <div @click="toggleItem(web)" class="general-info">
+          <img :src="web.img" :alt="web.name" />
+        </div>
+        <div v-if="web.isSpread" class="more-info">
+          <div class="info">
+            <div>Date:</div>
+            <div>{{ web.date }}</div>
+          </div>
+          <div class="info">
+            <div>Description:</div>
+            <div>{{ web.description }}</div>
+          </div>
+        </div>
       </li>
     </ul>
     <video class="video" src="../../assets/video/web-bg-video.mp4" muted autoplay loop></video>
@@ -24,6 +36,11 @@ export default {
     webData() {
       const data = this.$store.getters['web/getData'];
       return data;
+    },
+  },
+  methods: {
+    toggleItem(item) {
+      item.isSpread = !item.isSpread;
     },
   },
 };
@@ -70,6 +87,10 @@ h3 {
   margin-bottom: 10px;
 }
 
+h3:hover {
+  color: var(--color-main--attract);
+}
+
 p {
   display: flex;
   flex-flow: column;
@@ -87,6 +108,9 @@ ul {
 
 li {
   padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+
   border: 1px dashed var(--color-main--light);
   border-radius: 5px;
   opacity: 80%;
@@ -115,5 +139,31 @@ img {
   display: flex;
   width: calc(var(--size-web-img) - 40px);
   height: auto;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+.general-info {
+  flex-grow: 1;
+}
+
+.more-info {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+
+  border: 1px dotted var(--color-main--attract);
+  border-radius: 5px;
 }
 </style>

@@ -62,6 +62,7 @@ export default {
         image: this.image,
         date: date,
         id: uniqueID,
+        isSpread: false,
       };
       console.log(shopItem);
       this.$store.dispatch('shop/addShopItem', shopItem);
