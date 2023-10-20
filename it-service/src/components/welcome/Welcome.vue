@@ -1,6 +1,15 @@
 <template>
   <section>
-    <h1>Our services</h1>
+    <h1>Welcome to the IT-Service company!</h1>
+    <article>
+      <p>Our company is in buisnes over 10 years.</p>
+      <p>We are proudly can tell that we always treat all our customers politely and with respect.</p>
+      <p>When we providing our services we strive to achieve the best possible result.</p>
+      <p>We always pay attention to the customer's requirements and requests.</p>
+      <p>Over the years our company successfully provided our services and satisfied countless customers.</p>
+      <p>Our company is providing a variety of services, you can check them out below.</p>
+    </article>
+    <h2>Our services</h2>
     <ul class="services">
       <ServiceItem
         v-for="service in servicesList"
@@ -36,16 +45,39 @@ section {
   z-index: 10;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
   font-size: var(--size-font-header-main);
   margin-bottom: 40px;
+}
+
+article {
+  margin: 0 auto 50px auto;
+  width: 1100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+p {
+  padding: 20px 30px;
+  width: 300px;
+
+  border: 2px dotted var(--color-main--light);
 }
 .services {
   list-style: none;
   padding: 0;
 
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 290px);
   gap: 4rem 2rem;
 }
