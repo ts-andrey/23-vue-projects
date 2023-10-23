@@ -2,12 +2,12 @@
   <section>
     <h1>Welcome to the IT-Service company!</h1>
     <article>
-      <p>Our company is in buisnes over 10 years.</p>
-      <p>We are proudly can tell that we always treat all our customers politely and with respect.</p>
+      <p>We are in business over 15 years!</p>
+      <p>We always treat all our customers with courtesy and respect.</p>
       <p>When we providing our services we strive to achieve the best possible result.</p>
       <p>We always pay attention to the customer's requirements and requests.</p>
       <p>Over the years our company successfully provided our services and satisfied countless customers.</p>
-      <p>Our company is providing a variety of services, you can check them out below.</p>
+      <p>Our company is providing a variety of services, please check them out below.</p>
     </article>
     <h2>Our services</h2>
     <ul class="services">

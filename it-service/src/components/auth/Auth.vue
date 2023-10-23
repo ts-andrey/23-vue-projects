@@ -27,6 +27,9 @@ export default {
   methods: {
     login() {
       console.log(this.username, this.password);
+      this.clearForm();
+    },
+    clearForm() {
       this.username = '';
       this.password = '';
     },
