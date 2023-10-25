@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { checkSession } from '../../util/helpFuncs';
 import { v4 as uuidv4 } from 'uuid';
 
 export default {
@@ -34,6 +35,19 @@ export default {
       description: '',
       image: '',
     };
+  },
+  beforeCreate() {
+    const sessionData = checkSession();
+    if (sessionData.isValid) {
+      this.$store.dispatch('auth/login', sessionData.data);
+    } else {
+      this.$store.dispatch('auth/logout');
+    }
+    
+    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
+    if (!isLoggedIn) {
+      this.$router.push('/auth');
+    }
   },
   methods: {
     addWebItem() {

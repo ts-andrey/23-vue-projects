@@ -15,7 +15,6 @@ app.use(router);
 app.use(store);
 
 
-
 app.component('base-card', BaseCard);
 app.component('base-logo', BaseLogo);
 app.component('base-button', BaseButton);

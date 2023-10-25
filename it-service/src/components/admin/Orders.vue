@@ -25,18 +25,38 @@
         </div>
       </div>
       <div v-if="order.isSpread" class="more-info">
-        <div class="info"><div class="descr">Date:</div>{{ order.date }}</div>
-        <div class="info"><div class="descr">Appliance:</div> {{ order.appliance }}</div>
-        <div class="info"><div class="descr">Details:</div>{{ order.details }}</div>
-        <div class="info"><div class="descr">Customer:</div>{{ order.customer }}</div>
-        <div class="info"><div class="descr">Mail:</div>{{ order.mail }}</div>
-        <div class="info"><div class="descr">Phone:</div>{{ order.phone }}</div>
+        <div class="info">
+          <div class="descr">Date:</div>
+          {{ order.date }}
+        </div>
+        <div class="info">
+          <div class="descr">Appliance:</div>
+          {{ order.appliance }}
+        </div>
+        <div class="info">
+          <div class="descr">Details:</div>
+          {{ order.details }}
+        </div>
+        <div class="info">
+          <div class="descr">Customer:</div>
+          {{ order.customer }}
+        </div>
+        <div class="info">
+          <div class="descr">Mail:</div>
+          {{ order.mail }}
+        </div>
+        <div class="info">
+          <div class="descr">Phone:</div>
+          {{ order.phone }}
+        </div>
       </div>
     </li>
   </ul>
 </template>
 
 <script>
+import { checkSession } from '../../util/helpFuncs';
+
 export default {
   data() {
     return {
@@ -51,6 +71,19 @@ export default {
     filteredOrders() {
       return this.orders.filter(order => order.id.startsWith(this.filterValue));
     },
+  },
+  beforeCreate() {
+    const sessionData = checkSession();
+    if (sessionData.isValid) {
+      this.$store.dispatch('auth/login', sessionData.data);
+    } else {
+      this.$store.dispatch('auth/logout');
+    }
+
+    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
+    if (!isLoggedIn) {
+      this.$router.push('/auth');
+    }
   },
   methods: {
     filter(event) {
@@ -167,5 +200,4 @@ select {
   border: 1px dotted var(--color-main--attract);
   border-radius: 5px;
 }
-
 </style>

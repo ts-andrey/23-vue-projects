@@ -5,7 +5,25 @@
   </p>
 </template>
 
-<script></script>
+<script>
+import { checkSession } from '../../util/helpFuncs';
+
+export default {
+  beforeCreate() {
+    const sessionData = checkSession();
+    if (sessionData.isValid) {
+      this.$store.dispatch('auth/login', sessionData.data);
+    } else {
+      this.$store.dispatch('auth/logout');
+    }
+    
+    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
+    if (!isLoggedIn) {
+      this.$router.push('/auth');
+    }
+  },
+};
+</script>
 
 <style scoped>
 p {

@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>Administrative Sections</h1>
-    <BaseNav :linksData="linksData" />
+    <BaseNav :linksData="linksData"  />
     <router-view></router-view>
   </section>
 </template>
@@ -9,6 +9,7 @@
 <script>
 import BaseNav from '../../ui/BaseNav.vue';
 import adminLinksData from '../../data/adminLinksData';
+import { checkSession } from '../../util/helpFuncs';
 
 export default {
   components: {
@@ -18,6 +19,19 @@ export default {
     return {
       linksData: adminLinksData,
     };
+  },
+  beforeCreate() {
+    const sessionData = checkSession();
+    if (sessionData.isValid) {
+      this.$store.dispatch('auth/login', sessionData.data);
+    } else {
+      this.$store.dispatch('auth/logout');
+    }
+
+    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
+    if (!isLoggedIn) {
+      this.$router.push('/auth');
+    }
   },
 };
 </script>

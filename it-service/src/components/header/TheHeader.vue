@@ -3,7 +3,7 @@
     <div class="logo">
       <base-logo />
     </div>
-    <BaseNav :linksData="linksArr"/>
+    <BaseNav :linksData="linksArr" isHeader="{{true}}"/>
     <div class="bg"></div>
   </header>
 </template>
@@ -20,6 +20,7 @@ export default {
       linksArr: linksData,
     };
   },
+
 };
 </script>
 

@@ -2,7 +2,7 @@
   <section>
     <h1>Authorization page</h1>
 
-    <form @submit.prevent="login" class="auth">
+    <form @submit.prevent="authLogin" class="auth">
       <div class="control">
         <label for="username">Username</label>
         <input type="text" id="username" v-model="username" autocomplete="on" />
@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { checkSession, login } from '../../util/helpFuncs';
+
 export default {
   data() {
     return {
@@ -24,9 +26,30 @@ export default {
       password: '',
     };
   },
+  beforeCreate() {
+    const sessionData = checkSession();
+    if (sessionData.isValid) {
+      this.$store.dispatch('auth/login', sessionData.data);
+    } else {
+      this.$store.dispatch('auth/logout');
+    }
+
+    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
+    if (isLoggedIn) {
+      this.$router.push('/admin');
+    }
+  },
   methods: {
-    login() {
-      console.log(this.username, this.password);
+    authLogin() {
+      const data = {
+        user: this.username,
+        password: this.password,
+      };
+      const loginData = login(data);
+      if (loginData.loggedIn) {
+        this.$store.dispatch('auth/login', data);
+        this.$router.push('admin');
+      }
       this.clearForm();
     },
     clearForm() {

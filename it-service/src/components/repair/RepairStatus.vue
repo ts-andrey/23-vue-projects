@@ -9,7 +9,10 @@
   </div>
   <div v-if="isModalShown" class="modal" @click="closeModal">
     <div class="state-wrapper">
-      <div v-if="currentOrder && currentOrder.status" class="state">{{ currentOrder.status }}</div>
+      <div v-if="currentOrder && currentOrder.status" class="state">
+        <div><span>Order:</span> {{ currentOrder.id }}</div>
+        <div><span>Status:</span> {{ currentOrder.status }}</div>
+      </div>
       <div v-else class="state">
         There is no information about an order with such ID, please check for any typos and if there is none please
         contact us directly.
@@ -113,6 +116,15 @@ input:hover {
 
 .state {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.state span {
+  color: var(--color-font-main);
+  letter-spacing: 1px;
 }
 </style>

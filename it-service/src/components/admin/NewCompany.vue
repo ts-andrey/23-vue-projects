@@ -3,7 +3,7 @@
   <form @submit.prevent="addCompanyItem" class="form">
     <div class="control">
       <label for="company">Company</label>
-      <input type="text" id="company" v-model="company" autocomplete="on" />
+      <input type="text" id="company" v-model="name" autocomplete="on" />
     </div>
     <div class="control">
       <label for="description">Description</label>
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import { checkSession } from '../../util/helpFuncs';
 import { v4 as uuidv4 } from 'uuid';
 
 export default {
@@ -44,6 +45,19 @@ export default {
       link: '',
       cooperationTime: 'Less than a year',
     };
+  },
+  beforeCreate() {
+    const sessionData = checkSession();
+    if (sessionData.isValid) {
+      this.$store.dispatch('auth/login', sessionData.data);
+    } else {
+      this.$store.dispatch('auth/logout');
+    }
+    
+    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
+    if (!isLoggedIn) {
+      this.$router.push('/auth');
+    }
   },
   methods: {
     addCompanyItem() {
@@ -64,7 +78,7 @@ export default {
       this.clearForm();
     },
     clearForm() {
-      this.company = '';
+      this.name = '';
       this.description = '';
       this.image = '';
       this.cooperationTime = 'Less than a year';

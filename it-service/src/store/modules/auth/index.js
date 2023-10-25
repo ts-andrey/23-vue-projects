@@ -1,5 +1,3 @@
-import { checkAuth } from '../../../util/helpFuncs';
-
 export default {
   namespaced: true,
   state() {
@@ -20,13 +18,10 @@ export default {
   },
   actions: {
     login(context, payload) {
-      const isUserValid = checkAuth(payload);
-      if (isUserValid) {
-        context.commit('login', payload);
-      }
+      context.commit('login', payload);
     },
     logout(context) {
-      context.commit('logout', payload);
+      context.commit('logout');
     },
   },
   getters: {
