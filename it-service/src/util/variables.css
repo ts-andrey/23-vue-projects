@@ -28,4 +28,20 @@
   /* TIMINGS */
 
   --time-animation-duration: .3s;
+
+  /* ------------------------- */
+  /*           MEDIA           */
+  /* ------------------------- */
+
+  /* SIZES */
+
+  --size-header-height: 300px;
+  --size-footer-height: 100px;
+
+  --size-font-header-main_media-lowest: 28px;
+  --size-font-header-second_media-lowest: 20px;
+
+  /* PADDINGS / MARGINS */
+
+  --padding-section-media_lowest: 40px 0 60px 0;
 }

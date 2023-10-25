@@ -3,7 +3,7 @@
     <div class="logo">
       <base-logo />
     </div>
-    <BaseNav :linksData="linksArr" isHeader="{{true}}"/>
+    <BaseNav :linksData="linksArr" isHeader="{{true}}" />
     <div class="bg"></div>
   </header>
 </template>
@@ -20,7 +20,6 @@ export default {
       linksArr: linksData,
     };
   },
-
 };
 </script>
 
@@ -64,25 +63,6 @@ export default {
   justify-content: center;
 }
 
-.nav ul {
-  display: flex;
-  list-style: none;
-}
-
-.nav li {
-  margin: 0 5px;
-  display: flex;
-  border: 1px dotted var(--color-main--light);
-  border-radius: 5px;
-
-  transition: all var(--time-animation-duration);
-}
-
-.nav li:hover {
-  color: var(--color-main--dark);
-  background-color: var(--color-main--light);
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -92,5 +72,22 @@ a {
 
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .logo {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    margin: 20px 10px;
+  }
 }
 </style>

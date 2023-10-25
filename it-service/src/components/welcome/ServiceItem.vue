@@ -148,7 +148,6 @@ p::before {
 
 li ul {
   margin-top: 10px;
-  align-self: flex-start;
   padding: 0;
   list-style: circle;
   display: flex;
@@ -194,4 +193,5 @@ li:hover svg {
 li:hover p::before {
   border-top: 1px dotted var(--color-main--attract);
 }
+
 </style>

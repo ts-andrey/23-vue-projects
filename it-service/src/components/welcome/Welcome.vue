@@ -92,4 +92,27 @@ p {
   background: center / cover no-repeat url('../../assets/images/bg/bg-home.webp');
   opacity: 23%;
 }
+
+@media screen and (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: var(--size-font-header-main_media-lowest);
+    margin-bottom: 30px;
+  }
+
+  article {
+    width: 100%;
+    gap: 20px 0;
+    font-size: 18px;
+  }
+
+  p {
+    width: 90%;
+  }
+
+  .services {
+    grid-template-columns: repeat(1, 280px);
+    gap: 20px 0;
+  }
+}
 </style>

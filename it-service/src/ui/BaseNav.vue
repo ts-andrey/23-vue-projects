@@ -55,11 +55,10 @@ export default {
 .nav ul {
   display: flex;
   list-style: none;
+  gap: 15px;
 }
 
 .nav li {
-  margin: 0 5px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,5 +84,20 @@ a {
 
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 480px) {
+  .nav ul {
+    padding: 0;
+    margin: 0 ;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+
+    justify-content: center;
+  }
+
+  .nav li {
+    font-size: 15px;
+  }
 }
 </style>

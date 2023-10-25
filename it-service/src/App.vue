@@ -28,4 +28,10 @@ export default {
 section {
   padding: var(--padding-section-default);
 }
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: var(--padding-section-media_lowest);
+  }
+}
 </style>

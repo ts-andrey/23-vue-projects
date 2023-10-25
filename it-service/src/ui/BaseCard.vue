@@ -9,10 +9,16 @@
 <style scoped>
 .card {
   height: 100%;
-  
+
   padding: 10px 20px;
-  
+
   border: 1px dotted var(--color-main--light);
   border-radius: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
 }
 </style>
