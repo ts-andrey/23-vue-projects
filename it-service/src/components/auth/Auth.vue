@@ -97,4 +97,27 @@ input {
   padding: 5px 10px;
   font-size: 18px;
 }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    width: 95%;
+    margin-bottom: 40px;
+    font-size: var(--size-font-header-main_media-lowest);
+  }
+  .auth {
+    width: 95%;
+    padding: 30px 10px;
+  }
+  .control {
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+  }
+
+  input {
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
 </style>
