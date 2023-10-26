@@ -75,9 +75,16 @@ h2 {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 480px){
-  h2{
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: var(--size-font-header-main_media-lowest);
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-top: 30px;
     margin-bottom: -45px;
+    font-size: var(--size-font-header-main_media-lowest);
   }
 }
 </style>
