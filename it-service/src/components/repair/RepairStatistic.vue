@@ -55,4 +55,21 @@ span:nth-of-type(2) {
   font-size: 130%;
   color: var(--color-main--attract);
 }
+
+@media screen and (max-width: 480px) {
+  h2 {
+    width: 95%;
+    text-align: center;
+    font-size: var(--size-font-header-second_media-lowest);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    gap: 15px;
+  }
+}
 </style>

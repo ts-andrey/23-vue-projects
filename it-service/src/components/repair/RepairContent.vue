@@ -17,7 +17,7 @@
       </li>
     </ul>
 
-    <div>
+    <div class="comment">
       <h2>Not all processes may be necessary, but it is usually what is needed to fix something.</h2>
     </div>
   </div>
@@ -44,6 +44,7 @@ ul {
   padding: 0;
   margin: 30px 0;
   display: grid;
+  place-items: center;
 }
 
 li {
@@ -94,5 +95,35 @@ p {
   font-size: 16px;
   letter-spacing: 0.5px;
   line-height: 145%;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    width: 95%;
+    font-size: var(--size-font-header-second_media-lowest);
+  }
+  h3 {
+    font-size: var(--size-font-header-second_media-lowest);
+  }
+  li {
+    width: 95%;
+  }
+  .icon {
+    margin: 10px 0;
+    height: 30px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+  .indent {
+    margin-bottom: 10px;
+  }
 }
 </style>

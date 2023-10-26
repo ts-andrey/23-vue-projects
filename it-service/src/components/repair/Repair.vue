@@ -51,4 +51,26 @@ section {
 
   max-width: 1200px;
 }
+
+.container {
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    max-width: 100vw;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  h1{
+    font-size: var(--size-font-header-main_media-lowest);
+  }
+
+}
 </style>

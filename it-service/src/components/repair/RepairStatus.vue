@@ -127,4 +127,27 @@ input:hover {
   color: var(--color-font-main);
   letter-spacing: 1px;
 }
+
+@media screen and (max-width: 480px) {
+  .state-wrapper {
+    width: 95%;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: var(--size-font-header-second_media-lowest);
+  }
+
+  .control {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .input {
+    padding: 5px 10px;
+  }
+  .btn {
+  }
+}
 </style>
