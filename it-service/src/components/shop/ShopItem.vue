@@ -94,4 +94,19 @@ li {
 
   border: 1px dotted var(--color-main--attract);
 }
+
+@media screen and (max-width: 480px) {
+  li {
+    padding: 5px 10px;
+  }
+
+  .img {
+    margin: 10px 0;
+    height: 100px;
+  }
+
+  .price {
+    margin-top: 10px;
+  }
+}
 </style>

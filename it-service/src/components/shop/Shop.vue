@@ -74,4 +74,10 @@ h2 {
 .container:last-of-type {
   margin-bottom: 0;
 }
+
+@media screen and (max-width: 480px){
+  h2{
+    margin-bottom: -45px;
+  }
+}
 </style>

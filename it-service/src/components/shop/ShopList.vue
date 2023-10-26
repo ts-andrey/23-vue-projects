@@ -27,4 +27,11 @@ ul {
   border-right: 2px ridge var(--color-main--light);
   border-radius: 50px;
 }
+
+@media screen and (max-width: 480px) {
+  ul{
+    padding: 50px 10px 30px 10px;
+    grid-template-columns: repeat(1, 95%);
+  }
+}
 </style>
