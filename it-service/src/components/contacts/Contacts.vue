@@ -75,6 +75,9 @@ span {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
   margin: 20px 0;
 }
 
@@ -114,5 +117,34 @@ span {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    text-align: center;
+    font-size: var(--size-font-header-main_media-lowest);
+  }
+  h2 {
+    margin: 0;
+    text-align: center;
+    font-size: var(--size-font-header-second_media-lowest);
+  }
+  .service-list {
+    width: 95%;
+    padding: 20px 10px;
+
+    grid-template-columns: repeat(1, 95%);
+    gap: 20px;
+  }
+  .service-item {
+    padding: 10px;
+  }
+
+  .map-container {
+    height: 400px;
+    width: 95%;
+
+    padding: 10px;
+  }
 }
 </style>
