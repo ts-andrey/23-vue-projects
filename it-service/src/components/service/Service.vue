@@ -48,7 +48,7 @@
             </div>
             <div class="info">
               <div>Description:</div>
-              <div>{{company.description}}</div>
+              <div>{{ company.description }}</div>
             </div>
           </div>
         </li>
@@ -238,5 +238,52 @@ a {
 
   border: 1px dotted var(--color-main--attract);
   border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  h1,
+  h2,
+  h3,
+  h4 {
+    width: 95%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: var(--size-font-header-main_media-lowest);
+  }
+  h2,
+  h3 {
+    font-size: var(--size-font-header-second_media-lowest);
+  }
+
+  .container {
+    max-width: 100vw;
+    margin-top: 30px;
+  }
+  .description {
+    width: 95%;
+  }
+
+  .details {
+    margin: 0 10px;
+    grid-template-columns: repeat(1, 95%);
+    gap: 20px;
+  }
+
+  .details li {
+    padding: 10px 15px;
+  }
+
+  .company-list {
+    width: 100%;
+    padding: 20px 10px;
+
+    grid-template-columns: repeat(1, 95%);
+    gap: 20px;
+  }
+  .company-item {
+    padding: 10px 20px;
+  }
 }
 </style>
