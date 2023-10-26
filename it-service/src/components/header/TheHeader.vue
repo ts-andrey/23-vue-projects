@@ -85,7 +85,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 90px;
 
     margin: 20px 10px;
   }

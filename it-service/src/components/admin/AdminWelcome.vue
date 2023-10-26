@@ -16,7 +16,7 @@ export default {
     } else {
       this.$store.dispatch('auth/logout');
     }
-    
+
     const isLoggedIn = this.$store.getters['auth/getUserStatus'];
     if (!isLoggedIn) {
       this.$router.push('/auth');
@@ -33,5 +33,14 @@ p {
 
   font-size: var(--size-font-header-second);
   color: var(--color-main--light);
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    width: 90%;
+    place-items: center;
+    place-content: center;
+    font-size: var(--size-font-header-second_media-lowest);
+  }
 }
 </style>

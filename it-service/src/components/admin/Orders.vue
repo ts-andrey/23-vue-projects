@@ -200,4 +200,55 @@ select {
   border: 1px dotted var(--color-main--attract);
   border-radius: 5px;
 }
+
+@media screen and (max-width: 480px) {
+  .filter-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label{
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    width: fit-content;
+    place-items: center;
+    gap: 20px;
+  }
+  li {
+    width: 95%;
+    padding: 10px 20px;
+  }
+  .data-wrapper {
+    width: 95%;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    gap: 10px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  span:first-of-type {
+    width: 200px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
+    border-right: none;
+    border-bottom: 1px dotted var(--color-main--attract);
+  }
+
+  .status-wrapper {
+    margin-left: 0;
+  }
+}
 </style>

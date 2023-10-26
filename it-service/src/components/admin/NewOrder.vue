@@ -60,7 +60,7 @@ export default {
     } else {
       this.$store.dispatch('auth/logout');
     }
-    
+
     const isLoggedIn = this.$store.getters['auth/getUserStatus'];
     if (!isLoggedIn) {
       this.$router.push('/auth');
@@ -132,5 +132,23 @@ textarea {
   padding: 5px 10px;
   font-size: 18px;
   width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  .form{
+    width: 95%;
+    place-items: start;
+  }
+  .control {
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    margin-left: 0;
+    padding: 5px 10px;
+    font-size: 18px;
+    width: 95%;
+  }
 }
 </style>

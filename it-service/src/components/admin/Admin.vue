@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>Administrative Sections</h1>
-    <BaseNav :linksData="linksData"  />
+    <BaseNav :linksData="linksData" />
     <router-view></router-view>
   </section>
 </template>
@@ -59,5 +59,23 @@ h2 {
 nav {
   margin-bottom: 30px;
   color: var(--color-main--attract);
+}
+
+@media screen and (max-width: 480px) {
+  section{
+    display: grid;
+    place-items: center;
+    place-content: center;
+  }
+  
+  h1 {
+    font-size: var(--size-font-header-main_media-lowest);
+    margin-bottom: 20px;
+  }
+
+  nav {
+    margin-bottom: 20px;
+    color: var(--color-main--attract);
+  }
 }
 </style>
