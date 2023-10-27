@@ -58,19 +58,24 @@ section {
   place-content: center;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
   section {
     max-width: 100vw;
   }
+}
 
+@media screen and (max-width: 480px) {
   h1,
   h2 {
     text-align: center;
   }
 
-  h1{
+  h1 {
     font-size: var(--size-font-header-main_media-lowest);
   }
-
 }
 </style>

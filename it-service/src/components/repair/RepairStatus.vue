@@ -128,6 +128,16 @@ input:hover {
   letter-spacing: 1px;
 }
 
+@media screen and (max-width: 1000px) {
+  h2 {
+    text-align: center;
+  }
+  .control {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .state-wrapper {
     width: 95%;

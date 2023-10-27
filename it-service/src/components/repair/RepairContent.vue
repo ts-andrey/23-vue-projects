@@ -103,6 +103,13 @@ p {
   justify-content: center;
 }
 
+@media screen and (max-width: 1000px) {
+  h2,
+  li {
+    width: 95%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   h2 {
     width: 95%;
