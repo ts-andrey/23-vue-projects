@@ -119,6 +119,13 @@ span {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1100px) {
+  .map-container {
+    height: 600px;
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width: 480px) {
   h1 {
     text-align: center;
