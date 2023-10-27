@@ -27,6 +27,8 @@ export default {
 
 section {
   padding: var(--padding-section-default);
+  display: grid;
+  place-items: center;
 }
 
 @media screen and (max-width: 480px) {

@@ -57,8 +57,8 @@ article {
   width: 1100px;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
+  place-content: center;
   flex-wrap: wrap;
   gap: 30px;
 
@@ -91,6 +91,19 @@ p {
   z-index: 1;
   background: center / cover no-repeat url('../../assets/images/bg/bg-home.webp');
   opacity: 23%;
+}
+
+@media screen and (max-width: 1100px) {
+  article {
+    width: 98vw;
+    gap: 20px;
+  }
+  .services {
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {

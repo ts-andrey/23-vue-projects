@@ -194,4 +194,9 @@ li:hover p::before {
   border-top: 1px dotted var(--color-main--attract);
 }
 
+@media screen and (max-width: 1100px) {
+  .serviceItem {
+    width: 290px;
+  }
+}
 </style>
