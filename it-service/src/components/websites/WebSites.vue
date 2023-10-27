@@ -169,6 +169,32 @@ img:hover {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 1300px) {
+  h1,
+  h2 {
+    width: 95%;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  ul{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    width: calc(var(--size-web-img) * .8);
+  }
+  img {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   h1,
   h2,
@@ -181,10 +207,10 @@ img:hover {
     text-align: center;
   }
 
-  h1{
+  h1 {
     font-size: var(--size-font-header-main_media-lowest);
   }
-  h2{
+  h2 {
     font-size: var(--size-font-header-second_media-lowest);
   }
 
