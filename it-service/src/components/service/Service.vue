@@ -240,7 +240,7 @@ a {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
   h1,
   h2,
   h3,
@@ -249,6 +249,34 @@ a {
     text-align: center;
   }
 
+  .container {
+    margin-top: 40px;
+  }
+
+  .description {
+    width: 95%;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .details li {
+    width: 210px;
+  }
+
+  .company-list {
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
   h1 {
     font-size: var(--size-font-header-main_media-lowest);
   }
