@@ -86,10 +86,17 @@ a {
   letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 1100px) {
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 20px 20px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .nav ul {
     padding: 0;
-    margin: 0 ;
+    margin: 0;
     flex-wrap: wrap;
     gap: 20px 20px;
 

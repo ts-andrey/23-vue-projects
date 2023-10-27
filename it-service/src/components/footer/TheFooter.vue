@@ -111,6 +111,12 @@ a {
   color: var(--color-main--attract);
 }
 
+@media screen and (max-width: 600px) {
+  .nav ul {
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .footer {
     flex-direction: column;

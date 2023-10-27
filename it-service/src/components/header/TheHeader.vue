@@ -74,6 +74,15 @@ a {
   letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 1100px) {
+  .header{
+    padding: 0 10px;
+  }
+  .logo {
+    height: 160px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .header {
     justify-content: flex-start;
@@ -81,13 +90,8 @@ a {
   }
 
   .logo {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 90px;
-
-    margin: 20px 10px;
+    margin: 10px 0 20px 0;
   }
 }
 </style>
