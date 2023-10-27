@@ -28,8 +28,17 @@ ul {
   border-radius: 50px;
 }
 
+@media screen and (max-width: 1200px) {
+  ul {
+    padding: 70px 10px 30px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (max-width: 480px) {
-  ul{
+  ul {
     padding: 50px 10px 30px 10px;
     grid-template-columns: repeat(1, 95%);
   }

@@ -75,10 +75,15 @@ h2 {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   h1 {
     font-size: var(--size-font-header-main_media-lowest);
-    margin-bottom: 20px;
   }
 
   h2 {

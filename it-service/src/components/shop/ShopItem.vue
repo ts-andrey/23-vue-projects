@@ -95,6 +95,12 @@ li {
   border: 1px dotted var(--color-main--attract);
 }
 
+@media screen and (max-width: 1200px) {
+  li {
+   width: 335px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   li {
     padding: 5px 10px;
