@@ -124,12 +124,13 @@ textarea {
   width: 400px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .form{
     width: 95%;
     place-items: start;
   }
   .control {
+    width: 100%;
     flex-direction: column;
   }
 

@@ -201,7 +201,7 @@ select {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .filter-wrapper {
     display: flex;
     flex-direction: column;

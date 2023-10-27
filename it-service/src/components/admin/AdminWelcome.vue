@@ -35,6 +35,18 @@ p {
   color: var(--color-main--light);
 }
 
+@media screen and (max-width: 860px) {
+  p {
+    width: 95%;
+    place-items: center;
+    place-content: center;
+  }
+
+  span {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 480px) {
   p {
     width: 90%;
