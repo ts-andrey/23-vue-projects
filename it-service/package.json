@@ -1,5 +1,8 @@
 {
   "name": "it-service",
+  "author": {
+    "name": "Andrei Tsakunou"
+  },
   "version": "0.0.0",
   "private": true,
   "scripts": {
