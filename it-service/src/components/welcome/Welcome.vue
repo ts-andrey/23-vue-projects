@@ -45,6 +45,17 @@ section {
   z-index: 10;
 }
 
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-home.webp');
+  opacity: 23%;
+}
+
 h1,
 h2 {
   text-align: center;
@@ -80,17 +91,6 @@ p {
   justify-content: center;
   grid-template-columns: repeat(3, 290px);
   gap: 4rem 2rem;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100vw;
-  z-index: 1;
-  background: center / cover no-repeat url('../../assets/images/bg/bg-home.webp');
-  opacity: 23%;
 }
 
 @media screen and (max-width: 1100px) {

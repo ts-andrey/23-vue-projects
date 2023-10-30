@@ -14,6 +14,7 @@
       <base-button>Login</base-button>
     </form>
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -62,8 +63,24 @@ export default {
 
 <style scoped>
 section {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
   padding: var(--padding-section-default);
 }
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-login.webp');
+  opacity: 5%;
+}
+
 h1 {
   text-align: center;
   font-size: var(--size-font-header-main);

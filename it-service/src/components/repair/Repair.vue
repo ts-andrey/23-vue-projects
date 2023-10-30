@@ -5,6 +5,7 @@
     <RepairStatistic :data="statusData" />
     <RepairContent :data="repairProcesses" />
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -35,21 +36,34 @@ export default {
 </script>
 
 <style scoped>
+section {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-repair.webp');
+  opacity: 5%;
+}
+
 h1 {
   margin-bottom: 20px;
   font-size: var(--size-font-header-main);
 }
 .repair {
   letter-spacing: 0.45px;
-}
-
-section {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-
-  max-width: 1200px;
 }
 
 .container {

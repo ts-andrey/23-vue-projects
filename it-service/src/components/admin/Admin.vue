@@ -4,6 +4,7 @@
     <BaseNav :linksData="linksData" />
     <router-view></router-view>
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -38,7 +39,22 @@ export default {
 
 <style scoped>
 section {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
   padding-top: 10px;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-admin.webp');
+  opacity: 8%;
 }
 
 h1,
@@ -62,12 +78,12 @@ nav {
 }
 
 @media screen and (max-width: 480px) {
-  section{
+  section {
     display: grid;
     place-items: center;
     place-content: center;
   }
-  
+
   h1 {
     font-size: var(--size-font-header-main_media-lowest);
     margin-bottom: 20px;

@@ -55,6 +55,7 @@
       </ul>
     </div>
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -79,6 +80,24 @@ export default {
 </script>
 
 <style scoped>
+section {
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-service.webp');
+  opacity: 5%;
+}
+
 .container {
   max-width: 800px;
   margin-top: 80px;

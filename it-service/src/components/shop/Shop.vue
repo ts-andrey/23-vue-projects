@@ -22,6 +22,7 @@
       <ShopList :data="phones" />
     </div>
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -52,7 +53,21 @@ export default {
 
 <style scoped>
 section {
+  position: relative;
+  z-index: 10;
+
   max-width: 1200px;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-store.webp');
+  opacity: 5%;
 }
 
 h1 {

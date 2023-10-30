@@ -24,6 +24,7 @@
       </yandex-map>
     </div>
   </section>
+  <div class="bg"></div>
 </template>
 
 <script>
@@ -46,10 +47,25 @@ export default {
 
 <style scoped>
 section {
+  position: relative;
+  z-index: 10;
+
   display: flex;
   flex-flow: column;
   align-items: center;
   letter-spacing: 0.4px;
+  width: 100%;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 1;
+  background: center / cover no-repeat url('../../assets/images/bg/bg-contacts.webp');
+  opacity: 2%;
 }
 
 h1 {
