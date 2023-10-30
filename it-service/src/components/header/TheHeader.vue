@@ -5,6 +5,7 @@
     </div>
     <BaseNav :linksData="linksArr" isHeader="{{true}}" />
     <div class="bg"></div>
+    <div class="undercover"></div>
   </header>
 </template>
 
@@ -26,7 +27,7 @@ export default {
 <style scoped>
 .header {
   position: sticky;
-  z-index: 10;
+  z-index: 100;
 
   height: var(--size-header-height);
   display: flex;
@@ -44,20 +45,32 @@ export default {
   height: calc(var(--size-header-height) * 0.95);
 }
 
+.undercover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+
+  height: var(--size-header-height);
+  width: 100vw;
+  opacity: 100%;
+  background: var(--color-bg-main);
+}
+
 .bg {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100vw;
-  z-index: 1;
+  z-index: 20;
   background: center / cover no-repeat url('../../assets/images/bg/bg-header.webp');
   opacity: 40%;
 }
 
 .nav {
   position: relative;
-  z-index: 10;
+  z-index: 100;
 
   display: flex;
   justify-content: center;
@@ -75,7 +88,7 @@ a {
 }
 
 @media screen and (max-width: 1100px) {
-  .header{
+  .header {
     padding: 0 10px;
   }
   .logo {

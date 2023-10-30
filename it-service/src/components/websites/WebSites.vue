@@ -57,12 +57,12 @@ export default {
 
 .video {
   width: 100vw;
-  height: calc(100vh - var(--size-header-height));
+  height: 100vh;
 
   position: fixed;
   left: 0;
   right: 0;
-  top: var(--size-header-height);
+  top: 0;
   bottom: 0;
   z-index: -1;
 
@@ -180,15 +180,15 @@ img:hover {
     text-align: center;
   }
 
-  ul{
+  ul {
     width: 90vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
+
   li {
-    width: calc(var(--size-web-img) * .8);
+    width: calc(var(--size-web-img) * 0.8);
   }
   img {
     width: 100%;

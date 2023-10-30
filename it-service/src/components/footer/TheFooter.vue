@@ -13,6 +13,7 @@
       </nav>
     </div>
     <div class="bg"></div>
+    <div class="undercover"></div>
     <p class="copyright">&copy Copyright by Andrei Tsakunou, 2023</p>
   </footer>
 </template>
@@ -32,7 +33,7 @@ export default {
 <style scoped>
 .footer {
   position: relative;
-  z-index: 10;
+  z-index: 100;
 
   padding: 30px 0;
   min-height: var(--size-footer-height);
@@ -46,7 +47,7 @@ export default {
 
 .wrapper {
   position: relative;
-  z-index: 10;
+  z-index: 100;
 
   display: flex;
   place-items: center;
@@ -85,13 +86,25 @@ a {
   text-decoration: none;
 }
 
+.undercover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+
+  height: 100%;
+  width: 100vw;
+  opacity: 100%;
+  background: var(--color-bg-main);
+}
+
 .bg {
   position: absolute;
   bottom: 0;
   left: 0;
   height: 100%;
   width: 100vw;
-  z-index: 1;
+  z-index: 20;
   background: bottom / cover no-repeat url('../../assets/images/bg/bg-header.webp');
   opacity: 40%;
   user-select: none;
@@ -100,7 +113,7 @@ a {
 
 .copyright {
   position: relative;
-  z-index: 10;
+  z-index: 100;
   padding: 0 10px;
 
   margin-top: 20px;
