@@ -31,7 +31,11 @@
         </div>
         <div class="info">
           <div class="descr">Appliance:</div>
-          {{ order.appliance }}
+          {{ order.name }}
+        </div>
+        <div class="info">
+          <div class="descr">Image:</div>
+          <img :src="order.image" :alt="order.image" />
         </div>
         <div class="info">
           <div class="descr">Details:</div>
@@ -201,13 +205,14 @@ select {
   border-radius: 5px;
 }
 
+
 @media screen and (max-width: 640px) {
   .filter-wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  label{
+  label {
     margin-left: 0;
     margin-bottom: 10px;
   }
