@@ -1,7 +1,7 @@
 <template>
   <li class="shopItem">
     <div @click="toggleItem()" class="general-info">
-      <h3 class="title">{{ model }}</h3>
+      <h3 class="title">{{ name }}</h3>
       <img :src="image" alt="" class="img" />
       <p class="descr">{{ description }}</p>
       <p class="price">Price: {{ price }}$</p>
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  props: ['type', 'model', 'description', 'price', 'image', 'date', 'id', 'isSpread'],
+  props: ['type', 'name', 'description', 'price', 'image', 'date', 'id', 'isSpread'],
   data() {
     return {
       isDataSpread: this.isSpread,

@@ -1,94 +1,13 @@
 <template>
   <h2>New Shop Item form:</h2>
-  <form @submit.prevent="addShopItem" class="form">
-    <div class="itemType-wrapper">
-      <p>Select Shop Item Type</p>
-      <select name="itemType" v-model="type">
-        <option value="phone">phone</option>
-        <option value="notebook">notebook</option>
-        <option value="pcComponent">PC Component</option>
-        <option value="laptop">laptop</option>
-      </select>
-    </div>
-    <div class="control">
-      <label for="model">Model</label>
-      <input type="text" id="model" v-model="model" autocomplete="on" />
-    </div>
-    <div class="control">
-      <label for="description">Description</label>
-      <textarea
-        name="description"
-        id="description"
-        cols="30"
-        rows="10"
-        v-model="description"
-        autocomplete="of"
-      ></textarea>
-    </div>
-    <div class="control">
-      <label for="price">Price</label>
-      <input type="number" id="price" v-model="price" />
-    </div>
-    <div class="control">
-      <label for="image">Image link</label>
-      <input type="text" id="image" v-model="image" />
-    </div>
-    <base-button>Add New Shop Item</base-button>
-  </form>
+  <GeneralForm formType="shop" />
 </template>
 
 <script>
-import { checkSession } from '../../util/helpFuncs';
-import { v4 as uuidv4 } from 'uuid';
-
+import GeneralForm from '../form/GeneralForm.vue';
 export default {
-  data() {
-    return {
-      type: 'phone',
-      model: '',
-      description: '',
-      price: 0,
-      image: '',
-    };
-  },
-  beforeCreate() {
-    const sessionData = checkSession();
-    if (sessionData.isValid) {
-      this.$store.dispatch('auth/login', sessionData.data);
-    } else {
-      this.$store.dispatch('auth/logout');
-    }
-    
-    const isLoggedIn = this.$store.getters['auth/getUserStatus'];
-    if (!isLoggedIn) {
-      this.$router.push('/auth');
-    }
-  },
-  methods: {
-    addShopItem() {
-      const uniqueID = uuidv4();
-      const date = new Date().toLocaleString('en-GB', { timeZone: 'UTC' });
-      const shopItem = {
-        type: this.type,
-        model: this.model,
-        description: this.description,
-        price: this.price,
-        image: this.image,
-        date: date,
-        id: uniqueID,
-        isSpread: false,
-      };
-      console.log(shopItem);
-      this.$store.dispatch('shop/addShopItem', shopItem);
-      this.clearForm();
-    },
-    clearForm() {
-      this.type = 'phone';
-      this.model = '';
-      this.description = '';
-      this.price = 0;
-      this.image = '';
-    },
+  components: {
+    GeneralForm,
   },
 };
 </script>
@@ -98,66 +17,5 @@ h2 {
   text-align: center;
   font-size: var(--size-font-header-second);
   margin-bottom: 10px;
-}
-
-.form {
-  padding: 40px 20px;
-
-  display: flex;
-  flex-flow: column;
-  align-items: flex-end;
-
-  border-top: 3px solid var(--color-main--light);
-  border-bottom: 3px solid var(--color-main--light);
-  border-left: 1px ridge var(--color-main--light);
-  border-right: 1px ridge var(--color-main--light);
-  border-radius: 10px;
-}
-
-.itemType-wrapper {
-  margin-bottom: 20px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-select {
-  margin-top: 5px;
-  padding: 5px;
-}
-
-.control {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-
-  font-size: 18px;
-}
-
-input,
-textarea {
-  margin-left: 10px;
-  padding: 5px 10px;
-  font-size: 18px;
-  width: 400px;
-}
-
-@media screen and (max-width: 640px) {
-  .form{
-    width: 95%;
-    place-items: start;
-  }
-  .control {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  input,
-  textarea {
-    margin-left: 0;
-    padding: 5px 10px;
-    font-size: 18px;
-    width: 95%;
-  }
 }
 </style>

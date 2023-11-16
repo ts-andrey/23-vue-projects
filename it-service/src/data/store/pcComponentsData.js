@@ -21,35 +21,35 @@ import Thermal_paste_Arctic_MX_4_ACTCP00002B from '../../assets/images/store/pcC
 
 export default [
   {
-    model: 'Graphics card Palit GeForce GTX 1050 Ti StormX',
+    name: 'Graphics card Palit GeForce GTX 1050 Ti StormX',
     description: '4 GB GDDR5, 1392 MHz / 1392 MHz, 768sp, 128 bit, 2 slots, HDMI, DisplayPort, DVI',
     price: '89',
     image: Palit_GeForce_GTX_1050_Ti_StormX,
     isSpread: false,
   },
   {
-    model: 'Graphics card ASUS GeForce GTX 1050 Ti ',
+    name: 'Graphics card ASUS GeForce GTX 1050 Ti ',
     description: '4 GB GDDR5, 1392 MHz / 1392 MHz, 768sp, 128 bit, 2 slots, no power, HDMI, DisplayPort, DVI',
     price: '116',
     image: ASUS_GeForce_GTX_1050_Ti,
     isSpread: false,
   },
   {
-    model: 'Graphics card Gigabyte GeForce GTX 1650 OC',
+    name: 'Graphics card Gigabyte GeForce GTX 1650 OC',
     description: '4 GB GDDR5, 1485 MHz / 1710 MHz, 896sp, 128 bit, 2 slots, no power, HDMI, DisplayPort',
     price: '163',
     image: Gigabyte_GeForce_GTX_1650_OC,
     isSpread: false,
   },
   {
-    model: 'Graphics card MSI GeForce GTX 1650 Ventus XS OC',
+    name: 'Graphics card MSI GeForce GTX 1650 Ventus XS OC',
     description: '4 GB GDDR5, 1485 MHz / 1740 MHz, 896sp, 128 bit, 2 slots, HDMI, DisplayPort, DVI',
     price: '119',
     image: MSI_GeForce_GTX_1650_Ventus_XS_OC,
     isSpread: false,
   },
   {
-    model: 'Graphics card Inno3D GeForce RTX 2060 Twin X2',
+    name: 'Graphics card Inno3D GeForce RTX 2060 Twin X2',
     description:
       '6 GB GDDR6, 1365 MHz / 1680 MHz, 1920sp, 30 RT cores, ray tracing, 192 bit, 2 slots, 8 pin power, HDMI, DisplayPort',
     price: '238',
@@ -57,14 +57,14 @@ export default [
     isSpread: false,
   },
   {
-    model: 'Processor AMD Ryzen 5 3600',
+    name: 'Processor AMD Ryzen 5 3600',
     description: 'Matisse, AM4, 6 cores, frequency 4.2/3.6 GHz, cache 3 MB + 32 MB, 7 nm process technology, TDP 65W',
     price: '44',
     image: AMD_Ryzen_Processor,
     isSpread: false,
   },
   {
-    model: 'Processor AMD Ryzen 5 2600',
+    name: 'Processor AMD Ryzen 5 2600',
     description:
       'Pinnacle Ridge, AM4, 6 cores, frequency 3.9/3.4 GHz, cache 3 MB + 16 MB, process technology 12 nm, TDP 65W',
     price: '74',
@@ -72,7 +72,7 @@ export default [
     isSpread: false,
   },
   {
-    model: 'Processor Intel Core i5-9400F',
+    name: 'Processor Intel Core i5-9400F',
     description:
       'Coffee Lake, LGA1151 v2, 6 cores, frequency 4.1/2.9 GHz, 9 MB cache, 14 nm process technology, TDP 65W',
     price: '71',
@@ -80,21 +80,21 @@ export default [
     isSpread: false,
   },
   {
-    model: 'Processor Intel Core i3-8100',
+    name: 'Processor Intel Core i3-8100',
     description: 'Coffee Lake, LGA1151 v2, 4 cores, 3.6 GHz frequency, 6 MB cache, 14 nm process technology, TDP 65W',
     price: '74',
     image: Intel_Core_i3_8100,
     isSpread: false,
   },
   {
-    model: 'Processor AMD Athlon 3000G',
+    name: 'Processor AMD Athlon 3000G',
     description: 'Picasso, AM4, 2 cores, frequency 3.5 GHz, cache 1 MB + 4 MB, process technology 14 nm, TDP 35W',
     price: '29',
     image: AMD_Athlon_Processor,
     isSpread: false,
   },
   {
-    model: 'Motherboard ASUS TUF B450M-Pro Gaming',
+    name: 'Motherboard ASUS TUF B450M-Pro Gaming',
     description:
       'mATX, AMD AM4 socket, AMD B450 chipset, 4xDDR4 memory up to 4400 MHz, slots: 2xPCIe x16, 1xPCIe x1, 2xM.2',
     price: '89',
@@ -102,7 +102,7 @@ export default [
     isSpread: false,
   },
   {
-    model: 'Motherboard ASRock B450M Pro4',
+    name: 'Motherboard ASRock B450M Pro4',
     description:
       'mATX, AMD AM4 socket, AMD B450 chipset, 4xDDR4 memory up to 3200 MHz, slots: 2xPCIe x16, 1xPCIe x1, 2xM.2',
     price: '59',
@@ -110,7 +110,7 @@ export default [
     isSpread: false,
   },
   {
-    model: 'Motherboard MSI B450-A Pro Max',
+    name: 'Motherboard MSI B450-A Pro Max',
     description:
       'ATX, AMD AM4 socket, AMD B450 chipset, 4xDDR4 memory up to 4133 MHz, slots: 2xPCIe x16, 4xPCIe x1, 1xM.2',
     price: '53',
@@ -118,7 +118,7 @@ export default [
     isSpread: false,
   },
   {
-    model: 'Motherboard Gigabyte GA-A320M-S2H V2',
+    name: 'Motherboard Gigabyte GA-A320M-S2H V2',
     description:
       'mATX, AMD AM4 socket, AMD A320 chipset, 2xDDR4 memory up to 3200 MHz, slots: 1xPCIe x16, 2xPCIe x1, 1xM.2',
     price: '59',
@@ -126,7 +126,7 @@ export default [
     isSpread: false,
   },
   {
-    model: 'SSD Crucial BX500 240GB',
+    name: 'SSD Crucial BX500 240GB',
     description:
       '240 GB, 2.5", SATA 3.0, Silicon Motion SM2258XT controller, 3D TLC NAND chips, serial access: 540/500 MByte/s',
     price: '15',
@@ -134,14 +134,14 @@ export default [
     isSpread: false,
   },
   {
-    model: 'SSD Kingston A400 480GB',
+    name: 'SSD Kingston A400 480GB',
     description: '480 GB, 2.5", SATA 3.0, 3D TLC NAND chips, serial access: 500/450 MB/s',
     price: '23',
     image: SSD_Kingston_A400_480GB,
     isSpread: false,
   },
   {
-    model: 'SSD Samsung 860 Evo 500GB',
+    name: 'SSD Samsung 860 Evo 500GB',
     description:
       '500 GB, 2.5", SATA 3.0, Samsung MJX controller, 3D TLC NAND chips, sequential access: 550/520 MByte/s, random access: 98000/90000 IOps, DRAM buffer',
     price: '142',
@@ -149,7 +149,7 @@ export default [
     isSpread: false,
   },
   {
-    model: 'SSD Gigabyte 480GB',
+    name: 'SSD Gigabyte 480GB',
     description:
       '480 GB, 2.5", SATA 3.0, 3D TLC NAND chips, sequential access: 550/480 MByte/s, random access: 75000/70000 IOps',
     price: '20',
@@ -157,21 +157,21 @@ export default [
     isSpread: false,
   },
   {
-    model: 'CPU cooler DeepCool GAMMAXX 300',
+    name: 'CPU cooler DeepCool GAMMAXX 300',
     description: 'CPU cooler, aluminum, dissipation up to 130 W, noise 21 dB, fan 120 mm, 1600 rpm, PWM',
     price: '9',
     image: CPU_cooler_DeepCool_GAMMAXX_300,
     isSpread: false,
   },
   {
-    model: 'Thermal paste Arctic MX-4 ACTCP00002B (4g)',
+    name: 'Thermal paste Arctic MX-4 ACTCP00002B (4g)',
     description: 'thermal paste, 8.5 W/(m⋅K)',
     price: '4',
     image: Thermal_paste_Arctic_MX_4_ACTCP00002B,
     isSpread: false,
   },
   {
-    model: 'CPU cooler ID-Cooling SE-224-XT Basic',
+    name: 'CPU cooler ID-Cooling SE-224-XT Basic',
     description: 'CPU cooler, aluminum, dissipation up to 180 W, noise 32.5 dB, fan 120 mm, 1800 rpm, PWM',
     price: '13',
     image: CPU_cooler_ID_Cooling_SE_224_XT_Basic,
