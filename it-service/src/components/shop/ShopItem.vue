@@ -6,7 +6,7 @@
       <p class="descr">{{ description }}</p>
       <p class="price">Price: {{ price }}$</p>
     </div>
-    <div v-if="isDataSpread" class="more-info">
+    <div v-if="isDataSpread && isAuthenticated" class="more-info">
       <div class="info">
         <div>Date:</div>
         <div>{{ date }}</div>
@@ -26,6 +26,11 @@ export default {
     return {
       isDataSpread: this.isSpread,
     };
+  },
+  computed: {
+    isAuthenticated() {
+      return this.$store.getters['auth/getUserStatus'];
+    },
   },
   methods: {
     toggleItem() {
@@ -97,7 +102,7 @@ li {
 
 @media screen and (max-width: 1200px) {
   li {
-   width: 335px;
+    width: 335px;
   }
 }
 

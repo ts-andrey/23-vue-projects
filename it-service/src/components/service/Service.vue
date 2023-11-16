@@ -41,7 +41,7 @@
             </div>
             <p>time we have been providing our services: {{ company.cooperationTime }}</p>
           </div>
-          <div v-if="company.isSpread" class="more-info">
+          <div v-if="company.isSpread && isAuthenticated" class="more-info">
             <div class="info">
               <div>Date:</div>
               <div>{{ company.date }}</div>
@@ -70,6 +70,9 @@ export default {
     companyList() {
       return this.$store.getters['company/getData'];
     },
+    isAuthenticated() {
+      return this.$store.getters['auth/getUserStatus'];
+    },
   },
   methods: {
     toggleItem(item) {
@@ -92,7 +95,7 @@ section {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100vw;
+  width: calc(100vw - var(--size-scrollbar));
   z-index: 1;
   background: center / cover no-repeat url('../../assets/images/bg/bg-service.webp');
   opacity: 5%;

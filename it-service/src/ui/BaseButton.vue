@@ -1,10 +1,14 @@
 <template>
-  <button>
+  <button :className="isCompact ? 'mini' : ''">
     <slot></slot>
   </button>
 </template>
 
-<script></script>
+<script>
+export default {
+  props: ['isCompact'],
+};
+</script>
 
 <style scoped>
 button {
@@ -18,6 +22,10 @@ button {
   border-radius: 5px;
 
   transition: all var(--time-animation-duration);
+}
+
+.mini{
+  padding: 5px 20px;
 }
 
 button:hover {

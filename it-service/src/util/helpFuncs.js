@@ -1,4 +1,4 @@
-const PASS = 'adminPassword';
+const PASS = 'admin';
 const USER = 'admin';
 
 export const checkAuth = data => {

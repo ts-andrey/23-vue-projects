@@ -14,14 +14,20 @@
         <div @click="toggleItem(web)" class="general-info">
           <img :src="web.img" :alt="web.name" />
         </div>
-        <div v-if="web.isSpread" class="more-info">
-          <div class="info">
-            <div>Date:</div>
-            <div>{{ web.date }}</div>
+        <div v-if="web.isSpread && isAuthenticated">
+          <div class="more-info">
+            <div class="info">
+              <div>Date:</div>
+              <div>{{ web.date }}</div>
+            </div>
+            <div class="info">
+              <div>Description:</div>
+              <div>{{ web.description }}</div>
+            </div>
           </div>
-          <div class="info">
-            <div>Description:</div>
-            <div>{{ web.description }}</div>
+          <div class="more-info">
+            <base-button isCompact="true">Delete</base-button>
+            <base-button isCompact="true">U[date]</base-button>
           </div>
         </div>
       </li>
@@ -36,6 +42,9 @@ export default {
     webData() {
       const data = this.$store.getters['web/getData'];
       return data;
+    },
+    isAuthenticated() {
+      return this.$store.getters['auth/getUserStatus'];
     },
   },
   methods: {
@@ -56,7 +65,7 @@ export default {
 }
 
 .video {
-  width: 100vw;
+  width: calc(100vw - var(--size-scrollbar));
   height: 100vh;
 
   position: fixed;

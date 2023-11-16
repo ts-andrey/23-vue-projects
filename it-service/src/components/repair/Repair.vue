@@ -52,7 +52,7 @@ section {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100vw;
+  width: calc(100vw - var(--size-scrollbar));
   z-index: 1;
   background: center / cover no-repeat url('../../assets/images/bg/bg-repair.webp');
   opacity: 5%;
