@@ -50,6 +50,7 @@
               <div>Description:</div>
               <div>{{ company.description }}</div>
             </div>
+            <base-item-config :itemData="company" type="company" />
           </div>
         </li>
       </ul>

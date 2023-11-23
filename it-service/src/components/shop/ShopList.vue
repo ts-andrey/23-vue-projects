@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <ShopItem v-for="el in data" :="el" />
+    <ShopItem v-for="el in data" :itemData="el" />
   </ul>
 </template>
 

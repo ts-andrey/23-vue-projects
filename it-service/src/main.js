@@ -8,15 +8,16 @@ import store from './store/store';
 import BaseCard from './ui/BaseCard.vue';
 import BaseLogo from './ui/BaseLogo.vue';
 import BaseButton from './ui/BaseButton.vue';
+import BaseItemConfig from './ui/BaseItemConfig.vue';
 
 const app = createApp(App);
 
 app.use(router);
 app.use(store);
 
-
 app.component('base-card', BaseCard);
 app.component('base-logo', BaseLogo);
 app.component('base-button', BaseButton);
+app.component('base-item-config', BaseItemConfig);
 
 app.mount('#app');

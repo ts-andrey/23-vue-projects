@@ -1,30 +1,31 @@
 <template>
   <li class="shopItem">
     <div @click="toggleItem()" class="general-info">
-      <h3 class="title">{{ name }}</h3>
-      <img :src="image" alt="" class="img" />
-      <p class="descr">{{ description }}</p>
-      <p class="price">Price: {{ price }}$</p>
+      <h3 class="title">{{ this.itemData.name }}</h3>
+      <img :src="this.itemData.image" :alt="this.itemData.name + ' image'" class="img" />
+      <p class="descr">{{ this.itemData.description }}</p>
+      <p class="price">Price: {{ this.itemData.price }}$</p>
     </div>
     <div v-if="isDataSpread && isAuthenticated" class="more-info">
       <div class="info">
         <div>Date:</div>
-        <div>{{ date }}</div>
+        <div>{{ this.itemData.date }}</div>
       </div>
       <div class="info">
         <div>Type:</div>
-        <div>{{ type }}</div>
+        <div>{{ this.itemData.type }}</div>
       </div>
+      <base-item-config :itemData="this.itemData" type="shop"/>
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  props: ['type', 'name', 'description', 'price', 'image', 'date', 'id', 'isSpread'],
+  props: ['itemData'],
   data() {
     return {
-      isDataSpread: this.isSpread,
+      isDataSpread: this.itemData.isSpread,
     };
   },
   computed: {
@@ -34,7 +35,7 @@ export default {
   },
   methods: {
     toggleItem() {
-      this.isDataSpread = !this.isDataSpread;
+      this.isDataSpread = !this.itemData.isDataSpread;
     },
   },
 };

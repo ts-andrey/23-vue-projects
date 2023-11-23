@@ -53,6 +53,7 @@
           <div class="descr">Phone:</div>
           {{ order.phone }}
         </div>
+        <base-item-config :itemData="order" type="order"/>
       </div>
     </li>
   </ul>

@@ -5,4 +5,10 @@ export default {
   addOrder(context, payload) {
     context.commit('addOrder', payload);
   },
+  removeOrderItem(context, payload) {
+    context.commit('removeOrderItem', payload);
+  },
+  updateOrderItem(context, payload) {
+    context.commit('updateOrderItem', payload);
+  },
 };

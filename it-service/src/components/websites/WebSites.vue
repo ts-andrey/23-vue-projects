@@ -25,10 +25,7 @@
               <div>{{ web.description }}</div>
             </div>
           </div>
-          <div class="more-info">
-            <base-button isCompact="true">Delete</base-button>
-            <base-button isCompact="true">U[date]</base-button>
-          </div>
+          <base-item-config :itemData="web" type="web"/>
         </div>
       </li>
     </ul>

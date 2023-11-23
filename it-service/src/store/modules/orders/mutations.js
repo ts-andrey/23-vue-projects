@@ -6,4 +6,13 @@ export default {
   addOrder(state, payload) {
     state.ordersData.unshift(payload);
   },
+  removeOrderItem(state, payload) {
+    console.log(state.ordersData);
+    state.ordersData = state.ordersData.filter(el => el.id !== payload.id);
+    console.log(state.ordersData);
+  },
+  updateOrderItem(state, payload) {
+    const index = state.ordersData.findIndex(el => el.id === payload.id);
+    state.ordersData[index] = payload;
+  },
 };
